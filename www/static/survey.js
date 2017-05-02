@@ -3160,6 +3160,8 @@ function onFailGift(message) {
 //===========Place======
 //Place
 function get_pic_place(i) {
+	var div_id="place_image_div"+id;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	place_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+i.toString()+"_place.jpg";
 	$("#place_image_name_hidden"+i).val(place_image_name);
@@ -3168,8 +3170,7 @@ function get_pic_place(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessPlace(imageURI) {
-	alert ('place_image_div'+i)
-	var image = document.getElementById('place_image_div'+i);
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="place_image_div_hidden"+i;
 	$("#"+hidden_path).val(imageURI);
