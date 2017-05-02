@@ -3224,6 +3224,8 @@ function onFailHairCare(message) {
 }
 //=========================================
 function get_pic_SkinCare(i) {
+	var div_id="SkinCare_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	SkinCare_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_SkinCare.jpg";
 	$("#SkinCare_image_div_hidden"+i.toString()).val(SkinCare_image_name);
@@ -3232,7 +3234,7 @@ function get_pic_SkinCare(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessSkinCare(imageURI) {
-	var image = document.getElementById('SkinCare_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="SkinCare_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
@@ -3243,6 +3245,8 @@ function onFailSkinCare(message) {
 }
 //===========================================
 function get_pic_Oral(i) {
+	var div_id="Oral_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	Oral_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_Oral.jpg";
 	$("#Oral_image_div_hidden"+i).val(Oral_image_name);
@@ -3251,7 +3255,7 @@ function get_pic_Oral(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessOral(imageURI) {
-	var image = document.getElementById('Oral_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="Oral_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
@@ -3262,6 +3266,8 @@ function onFailOral(message) {
 }
 //===========================================
 function get_pic_SkinCleansing(i) {
+	var div_id="SkinCleansing_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	Oral_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_SkinCleansing.jpg";
 	$("#SkinCleansing_image_div_hidden"+i.toString()).val(SkinCleansing_image_name);
@@ -3270,7 +3276,7 @@ function get_pic_SkinCleansing(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessSkinCleansing(imageURI) {
-	var image = document.getElementById('SkinCleansing_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="SkinCleansing_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
@@ -3281,6 +3287,8 @@ function onFailSkinCleansing(message) {
 }
 //===========================================
 function get_pic_Laundry(i) {
+	var div_id="Laundry_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	Oral_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_Laundry.jpg";
 	$("#Laundry_image_div_hidden"+i.toString()).val(Laundry_image_name);
@@ -3289,7 +3297,7 @@ function get_pic_Laundry(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessLaundry(imageURI) {
-	var image = document.getElementById('Laundry_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="Laundry_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
@@ -3300,6 +3308,8 @@ function onFailLaundry(message) {
 }
 //===========================================
 function get_pic_HHcleansing(i) {
+	var div_id="HHcleansing_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	HHcleansing_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_HHcleansing.jpg";
 	$("#HHcleansing_image_div_hidden"+i.toString()).val(HHcleansing_image_name);
@@ -3308,7 +3318,7 @@ function get_pic_HHcleansing(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessHHcleansing(imageURI) {
-	var image = document.getElementById('HHcleansing_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="HHcleansing_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
@@ -3319,6 +3329,8 @@ function onFailHHcleansing(message) {
 }
 //===========================================
 function get_pic_Foods(i) {
+	var div_id="Foods_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	Foods_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_Foods.jpg";
 	$("#Foods_image_div_hidden"+i).val(Foods_image_name);
@@ -3327,7 +3339,7 @@ function get_pic_Foods(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessFoods(imageURI) {
-	var image = document.getElementById('Foods_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="Foods_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
