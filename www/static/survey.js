@@ -2830,24 +2830,26 @@ function onFailFd_before(message) {
 
 //=============Category Self Pic=====================
 function get_pic_HairCare(id) {
-	var div_id="HairCare_image_div"+id.toString();
+	var div_id="HairCare_image_div"+id;
 	temp_image_div=div_id;
 	//var image = document.getElementById(temp_image_div);
-	var hidden_name="HairCare_image_name_hidden" + id.toString() ;
+	var hidden_name="HairCare_image_name_hidden" + id ;
 	var tempTime = $.now();
 	HairCare_image_name=tempTime.toString()+localStorage.selectedOutlet+id.toString()+"_HairCare.jpg";
 	$("#"+hidden_name).val(HairCare_image_name);
 	navigator.camera.getPicture(onSuccessHairCare, onFailHairCare, { quality: 50,
 		targetWidth: 300,
 		destinationType: Camera.DestinationType.FILE_URI,correctOrientation: true });
-	     //   targetHeight: 512,
+		
 }
 
 function onSuccessHairCare(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path=temp_image_div.replace("HairCare_image_div"+ id.toString(),"HairCare_image_div_hidden"+ id.toString());
+    var hidden_path=temp_image_div.replace("HairCare_image_div","npd_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
+	
+	
 }
 
 function onFailHairCare(message) {
