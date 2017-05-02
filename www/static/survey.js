@@ -573,7 +573,7 @@ function check_user() {
 		localStorage.outletString='';
 	//	clear_autho();
    		
-	alert (apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode)
+	//alert (apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode)
 	$("#error_login").html(apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode);	
    		$.ajax({
 				 type: 'POST',
@@ -1147,7 +1147,7 @@ function selectRouteException() {
 
 
 function marketPJP_check() { 
-	alert (localStorage.outletStr)
+	//alert (localStorage.outletStr)
 	outletStrGet=localStorage.outletStr
 	
 	var outletArray = outletStrGet.split('</rep_outlet>');									
@@ -2830,10 +2830,10 @@ function onFailFd_before(message) {
 
 //=============Category Self Pic=====================
 function get_pic_HairCare(id) {
-	var div_id="HairCare_image_div"+id;
+	var div_id="HairCare_image_div"+id.toString();
 	temp_image_div=div_id;
 	//var image = document.getElementById(temp_image_div);
-	var hidden_name="HairCare_image_name_hidden" + id ;
+	var hidden_name="HairCare_image_name_hidden" + id.toString() ;
 	var tempTime = $.now();
 	HairCare_image_name=tempTime.toString()+localStorage.selectedOutlet+id.toString()+"_HairCare.jpg";
 	$("#"+hidden_name).val(HairCare_image_name);
@@ -2846,7 +2846,7 @@ function get_pic_HairCare(id) {
 function onSuccessHairCare(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path=temp_image_div.replace("HairCare_image_div"+ id,"HairCare_image_div_hidden"+ id);
+    var hidden_path=temp_image_div.replace("HairCare_image_div"+ id.toString(),"HairCare_image_div_hidden"+ id.toString());
 	$("#"+hidden_path).val(imageURI);
 }
 
