@@ -20,6 +20,7 @@ var apipath_image = 'http://a007.yeapps.com/unileverEon/';
 var step_flag=0; // 1 fd , 2 qpds, 3 gift
 
 var temp_image_div='';
+localStorage.routeIDName='';
 //localStorage.m_new="";
 //localStorage.submitted_outlet="";
 
@@ -3161,15 +3162,15 @@ function onFailGift(message) {
 function get_pic_place(i) {
 	var tempTime = $.now();
 	place_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+i.toString()+"_place.jpg";
-	$("#place_image_name_hidden"+i.toString()).val(place_image_name);
+	$("#place_image_name_hidden"+i).val(place_image_name);
 	navigator.camera.getPicture(onSuccessPlace, onFailPlace, { quality: 70,
 		targetWidth: 450,
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessPlace(imageURI) {
-	var image = document.getElementById('place_image_div'+i.toString());
+	var image = document.getElementById('place_image_div'+i);
     image.src = imageURI;
-    var hidden_path="place_image_div_hidden"+i.toString();
+    var hidden_path="place_image_div_hidden"+i;
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailPlace(message) {
