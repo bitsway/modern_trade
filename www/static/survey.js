@@ -3203,6 +3203,8 @@ function onFailShop(message) {
 
 //===================Catagory all Start====================
 function get_pic_HairCare(i) {
+	var div_id="HairCare_image_div"+i;
+	temp_image_div=div_id;
 	var tempTime = $.now();
 	HairCare_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_HairCare.jpg";
 	$("#HairCare_image_div_hidden"+i.toString()).val(HairCare_image_name);
@@ -3211,7 +3213,7 @@ function get_pic_HairCare(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessHairCare(imageURI) {
-	var image = document.getElementById('HairCare_image_div'+i.toString());
+	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path="HairCare_image_div_hidden"+i.toString();
 	$("#"+hidden_path).val(imageURI);
