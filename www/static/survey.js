@@ -256,7 +256,7 @@ function cancel_outlet_next_next(){
 //	var selectedoutlet=outletGet.split('[')[1].replace(']','')
 //	localStorage.selectedoutlet=selectedoutlet
 	
-	alert (localStorage.outletNameID)
+	//alert (localStorage.outletNameID)
 	$("#place_outlet_nameID").empty();
 	$("#place_outlet_nameID").append(localStorage.outletNameID).trigger('create');
 	$("#cpageOutletNameID").empty();
@@ -574,7 +574,7 @@ function check_user() {
 	//	clear_autho();
    		
 	//alert (apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode)
-	$("#error_login").html(apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode);	
+	//$("#error_login").html(apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode);	
    		$.ajax({
 				 type: 'POST',
 				 url: apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode,
@@ -2844,9 +2844,10 @@ function get_pic_HairCare(id) {
 }
 
 function onSuccessHairCare(imageURI) {
+	alert (imageURI)
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path=temp_image_div.replace("HairCare_image_div","npd_image_div_hidden");
+    var hidden_path=temp_image_div.replace("HairCare_image_div","HairCare_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 	
 	
