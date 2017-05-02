@@ -612,9 +612,12 @@ function check_user() {
 								localStorage.synccode=resultArray[1];
 								
 								localStorage.saved_visit=resultArray[2];
+								localStorage.outletStr=resultArray[3];
 								
 								var result_string=resultArray[4];
 								//alert (result_string)
+								
+								
 								var cancel_reasonArray = result_string.split('</cancelList>');									
 								var cancelList = cancel_reasonArray[0].replace("<cancelList>","");
 								
@@ -1144,7 +1147,7 @@ function selectRouteException() {
 
 
 function marketPJP_check() { 
-	
+	alert (localStorage.outletStr)
 	outletStrGet=localStorage.outletStr
 	
 	var outletArray = outletStrGet.split('</rep_outlet>');									
