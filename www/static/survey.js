@@ -2912,6 +2912,7 @@ function onFailOral(message) {
 }
 //=====================
 function get_pic_SkinCleansing(id) {
+	alert (id)
 	var div_id="SkinCleansing_image_div"+id;
 	temp_image_div=div_id;
 	//var image = document.getElementById(temp_image_div);
