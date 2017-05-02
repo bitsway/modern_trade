@@ -3168,6 +3168,7 @@ function get_pic_place(i) {
 		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
 }
 function onSuccessPlace(imageURI) {
+	alert (imageURI)
 	var image = document.getElementById('place_image_div'+i);
     image.src = imageURI;
     var hidden_path="place_image_div_hidden"+i;
