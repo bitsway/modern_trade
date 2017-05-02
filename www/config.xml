@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.yeapps.fmcg50"
+        id        = "com.yeapps.modernTrade"
         version   = "5.0.1">
 
-    <name>FMCG 5.0</name>
+    <name>modernTrade</name>
 
     <description>
-       M-Reporting for FMCG
+       modernTrade
     </description>
 
     <author href="businesssolutionapps.com" email="info@im-gp.com">
