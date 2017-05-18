@@ -2380,23 +2380,23 @@ function submit_data() {
 			$( "#dataShow").text(apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&outlet='+outlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&CategoryStr='+localStorage.CategoryStr+'&npd_data='+localStorage.npd_data+'&fdisplay_data='+localStorage.fdisplay_data+'&qpds_data='+localStorage.qpds_data+'&place_data='+localStorage.place_data);
 			//alert (apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&outlet='+outlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&CategoryStr='+localStorage.CategoryStr+'&npd_data='+localStorage.npd_data+'&fdisplay_data='+localStorage.fdisplay_data+'&qpds_data='+localStorage.qpds_data+'&place_data='+localStorage.place_data)
 			var check_outlet= localStorage.outletString;
-			//$.ajax({
-//						type: 'POST',
-//						url: apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&route='+localStorage.selectedRoute+'&routeEx='+localStorage.routeException+'&outlet='+localStorage.selectedOutlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&giftImage='+giftImage+'&mhskus_data='+localStorage.mhskus_data_ready+'&npd_data='+localStorage.npd_data_ready+'&fdisplay_data='+fdisplay_data+'&qpds_data='+qpds_data+'&gift_data='+localStorage.gift_data_ready+'&place_data='+localStorage.place_data_ready+'&shop_data='+localStorage.shop_data_ready+'&key_data='+localStorage.key_data_ready,
-//						 success: function(result) {	
-//								
-//								if (result==''){
-//									alert ('Sorry Network not available');
-//								}
-//								else{
-//		
-//									if (result!='SUCCESS'){
-//										$("#submit_data_check").html(result);
-//									}
-//									if (result=='SUCCESS'){
-//										
-//										//marchandising distribution
-//										var temp="";							
+			$.ajax({
+						type: 'POST',
+						url: apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&outlet='+outlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&CategoryStr='+localStorage.CategoryStr+'&npd_data='+localStorage.npd_data+'&fdisplay_data='+localStorage.fdisplay_data+'&qpds_data='+localStorage.qpds_data+'&place_data='+localStorage.place_data,
+						 success: function(result) {	
+								
+								if (result==''){
+									alert ('Sorry Network not available');
+								}
+								else{
+		
+									if (result!='SUCCESS'){
+										$("#submit_data_check").html(result);
+									}
+									if (result=='SUCCESS'){
+										alert (result)
+										//marchandising distribution
+										//var temp="";							
 //										if(localStorage.mar_distrib_data=="undefined" || localStorage.mar_distrib_data==undefined || localStorage.mar_distrib_data==""){
 //											temp="";
 //										}else{
@@ -2407,8 +2407,8 @@ function submit_data() {
 //											}else{
 //												//---
 //												var mar_distrib_stock_new="";
-//												
-//												var mar_distrib_stockList=localStorage.mar_distrib_stock.split('rd');										
+												
+												//var mar_distrib_stockList=localStorage.mar_distrib_stock.split('rd');										
 //												for (var j=0; j < mar_distrib_stockList.length; j++){
 //													mar_distrib_stockListSingleL=mar_distrib_stockList[j].split(',');
 //													var campSlChannel=mar_distrib_stockListSingleL[0]
@@ -2433,8 +2433,8 @@ function submit_data() {
 //															break;
 //															}
 //													}//--
-//													
-//													if(mar_distrib_stock_new==""){
+													
+													//if(mar_distrib_stock_new==""){
 //														mar_distrib_stock_new=campSlChannel+','+availableQty;
 //													}else{
 //														mar_distrib_stock_new+='rd'+campSlChannel+','+availableQty;
@@ -2447,10 +2447,10 @@ function submit_data() {
 //											}
 //										}								
 //										localStorage.mar_distrib_data="";								
-//										//----- marchandising end
-//										
-//										
-//										localStorage.dataSubmit=1;
+										//----- marchandising end
+										
+										
+										//localStorage.dataSubmit=1;
 //										buttonCheck();
 //										
 //										
@@ -2488,27 +2488,27 @@ function submit_data() {
 //										
 //										
 //										upload_fd();
-//										cancel_outlet();
-//										var url = "#outletPage";
-//										$.mobile.navigate(url);
-//										//location.reload();
-//										localStorage.dataSubmit=0
-//										
-//									}
-//									
-//											
-//								}
-//								
-//							  }, 
-//						  error: function(result) {
-//							 
-//							 $("#sub_button").show();
-//							// $("#submit_data").html("Network timeout. Please ensure you have good network signal and working Internet.");
-//							 localStorage.dataSubmit=0;
-//							 localStorage.submit_count=parseInt(localStorage.submit_count)+1
-//							 
-//							
-//							 if (localStorage.submit_count<1){
+										cancel_outlet();
+										var url = "#outletPage";
+										$.mobile.navigate(url);
+										//location.reload();
+										localStorage.dataSubmit=0
+										
+									}
+									
+											
+								}
+								
+							  }, 
+						  error: function(result) {
+							 
+							 $("#sub_button").show();
+							// $("#submit_data").html("Network timeout. Please ensure you have good network signal and working Internet.");
+							 localStorage.dataSubmit=0;
+						//	 localStorage.submit_count=parseInt(localStorage.submit_count)+1
+							 
+							
+							// if (localStorage.submit_count<1){
 //								 buttonCheck();
 //								 $("#submit_data").html('');
 //								 var url = "#submitPage";
@@ -2516,9 +2516,9 @@ function submit_data() {
 //							 }
 //							 else{
 //								  $("#submit_data").html("Saved Request. Please try later");
-//								  
-//								  
-//								  localStorage.outletString=check_outlet.replace('<input type="radio" name="RadioOutlet" value="'+localStorage.selectedOutlet+'rdrd'+localStorage.selected_date_get+'">','<input type="radio" name="RadioOutlet" value="'+localStorage.selectedOutlet+'rdrd'+localStorage.selected_date_get+'" disabled="True">');
+								  
+								  
+								 // localStorage.outletString=check_outlet.replace('<input type="radio" name="RadioOutlet" value="'+localStorage.selectedOutlet+'rdrd'+localStorage.selected_date_get+'">','<input type="radio" name="RadioOutlet" value="'+localStorage.selectedOutlet+'rdrd'+localStorage.selected_date_get+'" disabled="True">');
 //								
 //								
 //								  localStorage.saved_req=localStorage.saved_req+'<savedsaved><'+localStorage.selectedOutlet+'><OidOid>'+localStorage.outletIDnameShow+'<showshow>'+apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&route='+localStorage.selectedRoute+'&routeEx='+localStorage.routeException+'&outlet='+localStorage.selectedOutlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&giftImage='+giftImage+'&mhskus_data='+localStorage.mhskus_data_ready+'&npd_data='+localStorage.npd_data_ready+'&fdisplay_data='+localStorage.fdisplay_data_ready+'&qpds_data='+localStorage.qpds_data_ready+'&gift_data='+localStorage.gift_data_ready+'&place_data='+localStorage.place_data_ready+'&shop_data='+localStorage.shop_data_ready+'&key_data='+localStorage.key_data_ready+'&fdisplayTotal='+localStorage.fdisplayTotal+'&qpdsSlabTotal='+localStorage.qpdsSlabTotal+'</'+localStorage.selectedOutlet+'>'
@@ -2526,12 +2526,12 @@ function submit_data() {
 //								
 //								$("#outletString").empty();
 //								$("#outletString").append(localStorage.outletString).trigger('create');
-//								
-//								cancel_outlet();
-//							 
-//							 }
-//						  }
-//					  });//end ajax
+								
+							//	cancel_outlet();
+							 
+						//	 }
+						  }
+					  });//end ajax
 	
 	}//Check sync date
 }
