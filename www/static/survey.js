@@ -1544,7 +1544,7 @@ function syncOutlet() {
 			fdisplayStringShow=fdisplayStringShow+'<table width="100%" border="0"><tr style="color:#0329C0"> <td colspan="2" style="color:#006A6A; font-size:18px;">'+localStorage.routeIDName+'<br>'+localStorage.outletNameID+'</td></tr><tr > </table></br>'
 			
 			
-			fdisplayStringShowBefore=fdisplayStringShowBefore+'<table width="100%" border="0"><tr style="color:#0329C0"> <td colspan="2" style="color:#006A6A; font-size:18px;">'+localStorage.routeIDName+'<br>'+localStorage.outletNameID+'</td></tr><tr > </table></br>'
+			//fdisplayStringShowBefore=fdisplayStringShowBefore+'<table width="100%" border="0"><tr style="color:#0329C0"> <td colspan="2" style="color:#006A6A; font-size:18px;">'+localStorage.routeIDName+'<br>'+localStorage.outletNameID+'</td></tr><tr > </table></br>'
 			
 			//alert (fdisplaySlabTotal)
 			
@@ -1690,7 +1690,7 @@ function syncOutlet() {
 					'<img id="'+qpdsSL_image_div+'" height="100px" width="100px"  src="" alt="Promotion" />'+
 					'<input type="hidden" name="'+ qpdsSL_image_div_hidden +'" id="'+ qpdsSL_image_div_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ qpdsSL_image_name_hidden +'" id="'+ qpdsSL_image_name_hidden +'" value="" >'+
-					'<input type="hidden" name="'+ qpdsSL_total_hidden +'" id="'+ qpdsSL_total_hidden +'" value="'+qpdsSingleTotal+'" ><br>-----------------------------------------------------------------------'
+					'<input type="hidden" name="'+ qpdsSL_total_hidden +'" id="'+ qpdsSL_total_hidden +'" value="'+qpdsSingleTotal+'" ><br>---------------------------------------------------------------------<br>'
 		
 		 
 			}
@@ -2772,7 +2772,7 @@ function onFailNpd(message) {
 function get_pic_fdisplay(id) {
 	
 	//$('#fddiv_'+id).find('input, textarea, button, select').attr('disabled','disabled');
-	alert (id)
+	//alert (id)
 
 	var div_id="fdSL_image_div_"+id;
 	temp_image_div=div_id;
