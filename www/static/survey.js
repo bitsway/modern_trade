@@ -1690,7 +1690,7 @@ function syncOutlet() {
 					'<img id="'+qpdsSL_image_div+'" height="100px" width="100px"  src="" alt="Promotion" />'+
 					'<input type="hidden" name="'+ qpdsSL_image_div_hidden +'" id="'+ qpdsSL_image_div_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ qpdsSL_image_name_hidden +'" id="'+ qpdsSL_image_name_hidden +'" value="" >'+
-					'<input type="hidden" name="'+ qpdsSL_total_hidden +'" id="'+ qpdsSL_total_hidden +'" value="'+qpdsSingleTotal+'" ><br>-----------------------------------------------------------------------------'
+					'<input type="hidden" name="'+ qpdsSL_total_hidden +'" id="'+ qpdsSL_total_hidden +'" value="'+qpdsSingleTotal+'" ><br>-----------------------------------------------------------------------'
 		
 		 
 			}
@@ -2470,8 +2470,8 @@ function submit_data() {
 										//$("#outletString").html(localStorage.outletString);
 //										
 //										
-//										$("#outletString").empty();
-//										$("#outletString").append(localStorage.outletString).trigger('create');
+										$("#outletString").empty();
+										$("#outletString").append(localStorage.outletString).trigger('create');
 //										
 //										
 //										
