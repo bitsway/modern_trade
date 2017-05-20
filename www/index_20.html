@@ -90,8 +90,7 @@ $(document).ready(function(){
 //				
 //				
 //				$("#mhskus").html(localStorage.mhskusStringShow);
-//				$("#npd").html(localStorage.npdStringShow);
-				//alert (localStorage.fdisplayStringShow)
+				$("#npd").html(localStorage.npdStringShow);
 				$("#fdisplay").html(localStorage.fdisplayStringShow);
 //				
 //				$("#fdisplayStringShowBefore").html(localStorage.fdisplayStringShowBefore);
@@ -548,8 +547,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                     <table  width="100%" border="0">
                       <tr>
                         <td style="width:70%">
-                        <input type="hidden" name="HairCare_image_div_hidden1" id="HairCare_image_div_hidden1" value="" >
-						<input type="hidden" name="HairCare_image_name_hidden1" id="HairCare_image_name_hidden1" value="" >
+                        <input type="text" name="HairCare_image_div_hidden1" id="HairCare_image_div_hidden1" value="" >
+						<input type="text" name="HairCare_image_name_hidden1" id="HairCare_image_name_hidden1" value="" >
                         <img id="HairCare_image_div1" height="100px" width="100px"  src="" alt="Pic" />
                         </td>
                         <td align="right">
@@ -569,13 +568,13 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                       <table  width="100%" border="0">
                       <tr>
                         <td style="width:70%">
-                       <input type="hidden" name="HairCare_image_div_hidden2" id="HairCare_image_div_hidden2" value="" >
-						<input type="hidden" name="HairCare_image_name_hidden2" id="HairCare_image_name_hidden2" value="" >
+                       <input type="text" name="HairCare_image_div_hidden2" id="HairCare_image_div_hidden2" value="" >
+						<input type="text" name="HairCare_image_name_hidden2" id="HairCare_image_name_hidden2" value="" >
                         <img id="HairCare_image_div2" height="100px" width="100px"  src="" alt="Pic" />
                         </td>
                         <td align="right">
-                            <input type="number" name="HairCare_height2" id="HairCare_height2" value="" >
-							<input type="number" name="HairCare_width2" id="HairCare_width2" value="" >
+                            <input type="number" name="HairCare_height2" id="HairCare_height2" value="" placeholder="Height" >
+							<input type="number" name="HairCare_width2" id="HairCare_width2" value="" placeholder="Width" >
                         </td></tr>
                     </table>
 						
@@ -588,12 +587,12 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                    <table  width="100%" border="0">
                       <tr>
                        <td style="width:70%">
-                       <input type="hidden" name="HairCare_image_div_hidden3" id="HairCare_image_div_hidden3" value="" >
-						<input type="hidden" name="HairCare_image_name_hidden3" id="HairCare_image_name_hidden3" value="" >
+                       <input type="text" name="HairCare_image_div_hidden3" id="HairCare_image_div_hidden3" value="" >
+						<input type="text" name="HairCare_image_name_hidden3" id="HairCare_image_name_hidden3" value="" >
                        <img id="HairCare_image_div3" height="100px" width="100px"  src="" alt="Pic" /></td>
                        <td align="right">
-                            <input type="number" name="HairCare_height3" id="HairCare_height3" value="" >
-							<input type="number" name="HairCare_width3" id="HairCare_width3" value="" >
+                            <input type="number" name="HairCare_height3" id="HairCare_height3" value="" placeholder="Height" >
+							<input type="number" name="HairCare_width3" id="HairCare_width3" value="" placeholder="Width" >
                         </td>
                       </tr>
                     </table>
@@ -614,13 +613,13 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                      <table  width="100%" border="0">
                       <tr>
                         <td style="width:70%">
-                        <input type="hidden" name="HairCare_image_div_hidden4" id="HairCare_image_div_hidden4" value="" >
-						<input type="hidden" name="HairCare_image_name_hidden4" id="HairCare_image_name_hidden4" value="" >
+                        <input type="text" name="HairCare_image_div_hidden4" id="HairCare_image_div_hidden4" value="" >
+						<input type="text" name="HairCare_image_name_hidden4" id="HairCare_image_name_hidden4" value="" >
                         <img id="HairCare_image_div4" height="100px" width="100px"  src="" alt="Pic" />
                         </td>
                         <td align="right">
-                            <input type="number" name="HairCare_height4" id="HairCare_height4" value="" >
-							<input type="number" name="HairCare_width4" id="HairCare_width4" value="" >
+                            <input type="number" name="HairCare_height4" id="HairCare_height4" value="" placeholder="Height" >
+							<input type="number" name="HairCare_width4" id="HairCare_width4" value="" placeholder="Width" >
                         </td>
                       </tr>
                     </table>
@@ -648,8 +647,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                         </td>
                       </tr>
                     </table>
-						<input type="hidden" name="SkinCare_image_div_hidden1" id="SkinCare_image_div_hidden1" value="" >
-						<input type="hidden" name="SkinCare_image_name_hidden1" id="SkinCare_image_name_hidden1" value="" >
+						<input type="text" name="SkinCare_image_div_hidden1" id="SkinCare_image_div_hidden1" value="" >
+						<input type="text" name="SkinCare_image_name_hidden1" id="SkinCare_image_name_hidden1" value="" >
                     
                     
                      <table width="100%" border="0"><tr>
@@ -890,7 +889,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                      </div>
                				
 				<br/><br/>
-				<a data-role="button" onClick="selectOutletException();" >Next</a>
+				<a data-role="button" onClick="setCat_data();" >Next</a>
 
                 <div id="dataerror" style="color:#FF0; font-family:Arial, Helvetica, sans-serif; text-decoration:none; font-size:12px; font-style:normal; font-weight:lighter; text-shadow:none"  align="center"> </div>
                 <br/><br/>
@@ -1136,7 +1135,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 			<div id="location_button">
 			<a data-role="button" onClick="getlocationand_askhelp();">Confirm Location</a>
 			</div>
-            
+            <div id="dataShow"></div>        
 			<div id="sub_button_div">
         	<a  data-role="button" onClick="submit_data();" >Submit Data</a>
 			</div> 
@@ -1377,7 +1376,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 			<div  data-role="content" style="height:90%" >
             
           
-           <div id="place_outlet_nameID"></div>
+           <div id="place_outlet_nameID1">sss</div>
 		   </br></br>
 		  <div id="place_show" >
 		  <table width="100%" border="0"><tr>
