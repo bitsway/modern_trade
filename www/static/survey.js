@@ -1544,7 +1544,7 @@ function syncOutlet() {
 			fdisplayStringShow=fdisplayStringShow+'<table width="100%" border="0"><tr style="color:#0329C0"> <td colspan="2" style="color:#006A6A; font-size:18px;">'+localStorage.routeIDName+'<br>'+localStorage.outletNameID+'</td></tr><tr > </table></br>'
 			
 			
-			//fdisplayStringShowBefore=fdisplayStringShowBefore+'<table width="100%" border="0"><tr style="color:#0329C0"> <td colspan="2" style="color:#006A6A; font-size:18px;">'+localStorage.routeIDName+'<br>'+localStorage.outletNameID+'</td></tr><tr > </table></br>'
+			fdisplayStringShowBefore=fdisplayStringShowBefore+'<table width="100%" border="0"><tr style="color:#0329C0"> <td colspan="2" style="color:#006A6A; font-size:18px;">'+localStorage.routeIDName+'<br>'+localStorage.outletNameID+'</td></tr><tr > </table></br>'
 			
 			//alert (fdisplaySlabTotal)
 			
@@ -1573,7 +1573,7 @@ function syncOutlet() {
 					
 									
 					fdisplayStringShow=fdisplayStringShow+'<div id="fddiv_'+slab.toString()+'">'
-					fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table></div>';
+					fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table>';
 					fdisplayStringShow=fdisplayStringShow+'<img height="100px" width="100%"  src="'+apipath_image+'static/uni_images/display/'+fdisplaySlab_image+'" alt="FixedDisplay" />';
 					
 					
@@ -1690,7 +1690,7 @@ function syncOutlet() {
 					'<img id="'+qpdsSL_image_div+'" height="100px" width="100px"  src="" alt="Promotion" />'+
 					'<input type="hidden" name="'+ qpdsSL_image_div_hidden +'" id="'+ qpdsSL_image_div_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ qpdsSL_image_name_hidden +'" id="'+ qpdsSL_image_name_hidden +'" value="" >'+
-					'<input type="hidden" name="'+ qpdsSL_total_hidden +'" id="'+ qpdsSL_total_hidden +'" value="'+qpdsSingleTotal+'" ><br>---------------------------------------------------------------------<br>'
+					'<input type="hidden" name="'+ qpdsSL_total_hidden +'" id="'+ qpdsSL_total_hidden +'" value="'+qpdsSingleTotal+'" ><br>-----------------------------------------------------------------------------'
 		
 		 
 			}
@@ -2470,8 +2470,8 @@ function submit_data() {
 										//$("#outletString").html(localStorage.outletString);
 //										
 //										
-										$("#outletString").empty();
-										$("#outletString").append(localStorage.outletString).trigger('create');
+//										$("#outletString").empty();
+//										$("#outletString").append(localStorage.outletString).trigger('create');
 //										
 //										
 //										
@@ -2493,7 +2493,7 @@ function submit_data() {
 //										// Enable disable div end
 //										
 //										
-//										upload_fd();
+										upload_category();
 										cancel_outlet();
 										var url = "#outletPage";
 										$.mobile.navigate(url);
@@ -2772,7 +2772,7 @@ function onFailNpd(message) {
 function get_pic_fdisplay(id) {
 	
 	//$('#fddiv_'+id).find('input, textarea, button, select').attr('disabled','disabled');
-	//alert (id)
+	alert (id)
 
 	var div_id="fdSL_image_div_"+id;
 	temp_image_div=div_id;
@@ -3078,6 +3078,39 @@ function onFailFoods(message) {
 //==================upload image===============
 
 //------------------------------------------------------------------------
+function upload_category(){
+	//=============HairCare
+	var HairCare_image_name1=$("#HairCare_image_name_hidden1").val();
+	var HairCare_image_path1=$("#HairCare_image_div_hidden1").val();
+	
+	var HairCare_image_name2=$("#HairCare_image_name_hidden2").val();
+	var HairCare_image_path2=$("#HairCare_image_div_hidden2").val();
+	
+	var HairCare_image_name3=$("#HairCare_image_name_hidden3").val();
+	var HairCare_image_path3=$("#HairCare_image_div_hidden3").val();
+	
+	var HairCare_image_name4=$("#HairCare_image_name_hidden4").val();
+	var HairCare_image_path4=$("#HairCare_image_div_hidden4").val();
+	if ((HairCare_image_name1.length < 10) && (HairCare_image_name2.length < 10)  && (HairCare_image_name3.length < 10)  && (HairCare_image_name4.length < 10) ){
+		alert ("Haircare image not available");
+	}
+	
+	if (HairCare_image_name1.length >10){
+				uploadPhoto(HairCare_image_path1, HairCare_image_name1);
+	} 
+	if (HairCare_image_name2.length >10){
+				uploadPhoto(HairCare_image_path2, HairCare_image_name2);
+	} 
+	if (HairCare_image_name3.length >10){
+				uploadPhoto(HairCare_image_path3, HairCare_image_name3);
+	} 
+	if (HairCare_image_name4.length >10){
+				uploadPhoto(HairCare_image_path4, HairCare_image_name4);
+	} 
+	//==============SkinCare
+	
+}
+
 function upload_fd(){
 	//fixed display
 	localStorage.step_flag=1; //1 fd , 2 qpds, 3 gift
@@ -3314,8 +3347,8 @@ function uploadPhoto(imageURI, imageName) {
 
 
 //ft.upload(imageURI, encodeURI("http://127.0.0.1:8000/unilever/syncmobile/fileUploader/"),win,fail,options);
-
- ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/syncmobile/fileUploader/"),win,fail,options);
+// ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/syncmobile/fileUploader/"),win,fail,options);
+ ft.upload(imageURI, encodeURI("http://104.199.166.207/mordern_trade_image/mt_image/fileUploader/"),win,fail,options);
 }
 
 function win(r) {
