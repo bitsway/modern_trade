@@ -1397,14 +1397,14 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 		
 		
 		
-		alert (localStorage.CategoryStr)
+		alert (len(localStorage.CategoryStr))
 		
 		
-		if (len(localStorage.CategoryStr)>10){
+		//if (len(localStorage.CategoryStr)>10){
 			var url = "#fixedDisplay";
 			$.mobile.navigate(url);
 		
-		}
+		//}
 //		else if (localStorage.qpdsSkip==0){
 //			var url = "#qpdsPage";
 //			$.mobile.navigate(url);
