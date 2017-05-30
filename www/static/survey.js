@@ -2926,7 +2926,7 @@ function onFailShop(message) {
 
 //===================Catagory all Start====================
 function get_pic_HairCare(i) {
-	var div_id="HairCare_image_div"+i;
+	var div_id="HairCare_image_div_hidden"+i;
 	temp_image_div=div_id;
 	var tempTime = $.now();
 	HairCare_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+""+i.toString()+"_HairCare.jpg";
