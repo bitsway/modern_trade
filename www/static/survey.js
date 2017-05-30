@@ -1374,37 +1374,37 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	var HHcleansingStr=HHcleansing_image_path1+'fdfd'+HHcleansing_image_name1+'fdfd'+HHcleansing_height1+'fdfd'+HHcleansing_width1+'rdrd'
 	HHcleansingStr=HHcleansingStr+ HHcleansing_image_path2+'fdfd'+HHcleansing_image_name2+'fdfd'+HHcleansing_height2+'fdfd'+HHcleansing_width2+'rdrd'
 	CategoryStr=CategoryStr+'<HouseHoldcleansing>'+HHcleansingStr+'</HouseHoldcleansing>'
-	alert ('f')
+	//alert ('f')
 	//Foods	
 	var Foods_image_path1=$("#Foods_image_div_hidden1").val(); 
 	var Foods_image_name1=$("#Foods_image_name_hidden1").val();
 	var Foods_height1=$("#Foods_height1").val();
 	var Foods_width1=$("#Foods_width1").val();
-	alert ('1')
+	//alert ('1')
 	var Foods_image_path2=$("#Foods_image_div_hidden2").val(); 
 	var Foods_image_name2=$("#Foods_image_name_hidden2").val();
 	var Foods_height2=$("#Foods_height2").val();
 	var Foods_width2=$("#Foods_width2").val();
-	alert ('2')	
+	//alert ('2')	
 	var FoodsStr=Foods_image_path1+'fdfd'+Foods_image_name1+'fdfd'+Foods_height1+'fdfd'+Foods_width1+'rdrd'
 	FoodsStr=FoodsStr+ Foods_image_path2+'fdfd'+Foods_image_name2+'fdfd'+Foods_height2+'fdfd'+Foods_width2+'rdrd'
 	CategoryStr=CategoryStr+'<Foods>'+FoodsStr+'</Foods>'
-	alert ('3')
+	//alert ('3')
 	
 		
 	localStorage.CategoryStr=CategoryStr
 	//alert (localStorage.CategoryStr)	
-	alert ('4')	
+	//alert ('4')	
 		
 		
-		alert (len(localStorage.CategoryStr))
+		//alert (len(localStorage.CategoryStr))
 		
 		
-		//if (len(localStorage.CategoryStr)>10){
+		if (CategoryStr.length>10){
 			var url = "#fixedDisplay";
 			$.mobile.navigate(url);
 		
-		//}
+		}
 //		else if (localStorage.qpdsSkip==0){
 //			var url = "#qpdsPage";
 //			$.mobile.navigate(url);
