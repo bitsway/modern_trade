@@ -1292,7 +1292,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	
 	
 	CategoryStr='<HairCare>'+HairCareStr+'</HairCare>'                      
-
+	alert ('a')
 	//SkinCare
 	var SkinCare_image_path1=$("#SkinCare_image_div_hidden1").val(); 
 	var SkinCare_image_name1=$("#SkinCare_image_name_hidden1").val();
@@ -1314,7 +1314,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	SkinCareStr=SkinCareStr+SkinCare_image_path3+'fdfd'+SkinCare_image_name3+'fdfd'+SkinCare_height3+'fdfd'+SkinCare_width3+'rdrd'
 	
 	CategoryStr=CategoryStr+'<SkinCare>'+SkinCareStr+'</SkinCare>'
-	
+	alert ('b')
 	//Oral
 	var Oral_image_path1=$("#Oral_image_div_hidden1").val(); 
 	var Oral_image_name1=$("#Oral_image_name_hidden1").val();
@@ -1329,7 +1329,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	var OralStr=Oral_image_path1+'fdfd'+Oral_image_name1+'fdfd'+Oral_height1+'fdfd'+Oral_width1+'rdrd'
 	OralStr=	OralStr+Oral_image_path2+'fdfd'+Oral_image_name2+'fdfd'+Oral_height2+'fdfd'+Oral_width2+'rdrd'
 	CategoryStr=CategoryStr+'<Oral>'+OralStr+'</Oral>'
-		
+	alert ('c')	
 	//SkinCleansing
 	var SkinCleansing_image_path1=$("#SkinCleansing_image_div_hidden1").val(); 
 	var SkinCleansing_image_name1=$("#SkinCleansing_image_name_hidden1").val();
@@ -1344,7 +1344,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	var SkinCleansingStr=SkinCleansing_image_path1+'fdfd'+SkinCleansing_image_name1+'fdfd'+SkinCleansing_height1+'fdfd'+SkinCleansing_width1+'rdrd'
 	SkinCleansingStr=	 SkinCleansingStr+SkinCleansing_image_path2+'fdfd'+SkinCleansing_image_name2+'fdfd'+SkinCleansing_height2+'fdfd'+SkinCleansing_width2+'rdrd'
 	CategoryStr=CategoryStr+'<SkinCleansing>'+SkinCleansingStr+'</SkinCleansing>'
-	
+	alert ('d')
 	//Laundry
 	var Laundry_image_path1=$("#Laundry_image_div_hidden1").val(); 
 	var Laundry_image_name1=$("#Laundry_image_name_hidden1").val();
@@ -1359,7 +1359,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	var LaundryStr=Laundry_image_path1+'fdfd'+Laundry_image_name1+'fdfd'+Laundry_height1+'fdfd'+Laundry_width1+'rdrd'
 	LaundryStr=	LaundryStr+ Laundry_image_path2+'fdfd'+Laundry_image_name2+'fdfd'+Laundry_height2+'fdfd'+Laundry_width2+'rdrd'
 	CategoryStr=CategoryStr+'<Laundry>'+LaundryStr+'</Laundry>'
-	
+	alert ('e')
 	//HouseHoldcleansing
 	var HHcleansing_image_path1=$("#HHcleansing_image_div_hidden1").val(); 
 	var HHcleansing_image_name1=$("#HHcleansing_image_name_hidden1").val();
@@ -1374,7 +1374,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	var HHcleansingStr=HHcleansing_image_path1+'fdfd'+HHcleansing_image_name1+'fdfd'+HHcleansing_height1+'fdfd'+HHcleansing_width1+'rdrd'
 	HHcleansingStr=HHcleansingStr+ HHcleansing_image_path2+'fdfd'+HHcleansing_image_name2+'fdfd'+HHcleansing_height2+'fdfd'+HHcleansing_width2+'rdrd'
 	CategoryStr=CategoryStr+'<HouseHoldcleansing>'+HHcleansingStr+'</HouseHoldcleansing>'
-	
+	alert ('f')
 	//Foods	
 	var Foods_image_path1=$("#Foods_image_div_hidden1").val(); 
 	var Foods_image_name1=$("#Foods_image_name_hidden1").val();
