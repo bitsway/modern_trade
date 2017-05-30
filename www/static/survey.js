@@ -2938,7 +2938,7 @@ function get_pic_HairCare(i) {
 function onSuccessHairCare(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path=div_id.replace("HairCare_image_div","HairCare_image_div_hidden");
+    var hidden_path=temp_image_div.replace("HairCare_image_div","HairCare_image_div_hidden");
 	alert (imageURI)
 	alert (hidden_path)
 	$("#"+hidden_path).val(imageURI);
