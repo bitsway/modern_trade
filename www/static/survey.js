@@ -1397,7 +1397,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 		
 		
 		
-		
+		alert (localStorage.CategoryStr)
 		
 		
 		if (len(localStorage.CategoryStr)>10){
@@ -2939,8 +2939,8 @@ function onSuccessHairCare(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
     var hidden_path=temp_image_div.replace("HairCare_image_div","HairCare_image_div_hidden");
-	alert (imageURI)
-	alert (hidden_path)
+	//alert (imageURI)
+	//alert (hidden_path)
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailHairCare(message) {
@@ -2961,7 +2961,7 @@ function get_pic_SkinCare(i) {
 function onSuccessSkinCare(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path="SkinCare_image_div_hidden"+i.toString();
+    var hidden_path=temp_image_div.replace("SkinCare_image_div","SkinCare_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailSkinCare(message) {
@@ -2982,7 +2982,7 @@ function get_pic_Oral(i) {
 function onSuccessOral(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path="Oral_image_div_hidden"+i.toString();
+    var hidden_path=temp_image_div.replace("Oral_image_div","Oral_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailOral(message) {
@@ -3007,7 +3007,7 @@ function get_pic_SkinCleansing(i) {
 function onSuccessSkinCleansing(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path="SkinCleansing_image_div_hidden"+i.toString();
+    var hidden_path=temp_image_div.replace("SkinCleansing_image_div","SkinCleansing_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailSkinCleansing(message) {
@@ -3028,7 +3028,7 @@ function get_pic_Laundry(i) {
 function onSuccessLaundry(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path="Laundry_image_div_hidden"+i.toString();
+    var hidden_path=temp_image_div.replace("Laundry_image_div","Laundry_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailLaundry(message) {
@@ -3049,7 +3049,7 @@ function get_pic_HHcleansing(i) {
 function onSuccessHHcleansing(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path="HHcleansing_image_div_hidden"+i.toString();
+    var hidden_path=temp_image_div.replace("HHcleansing_image_div","HHcleansing_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailHHcleansing(message) {
@@ -3070,7 +3070,7 @@ function get_pic_Foods(i) {
 function onSuccessFoods(imageURI) {
 	var image = document.getElementById(temp_image_div);
     image.src = imageURI;
-    var hidden_path="Foods_image_div_hidden"+i.toString();
+    var hidden_path=temp_image_div.replace("Foods_image_div","Foods_image_div_hidden");
 	$("#"+hidden_path).val(imageURI);
 }
 function onFailFoods(message) {
