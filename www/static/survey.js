@@ -3226,7 +3226,7 @@ function upload_category(){
 	} 
 	
 	
-	upload_fd()
+	//upload_fd()
 	
 }
 
