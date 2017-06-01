@@ -3392,6 +3392,8 @@ function uploadPhoto(imageURI, imageName) {
   params.value2 = "param";
 
   options.params = params;
+ 
+  options.chunkedMode = false;
 
   var ft = new FileTransfer();
 	
