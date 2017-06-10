@@ -11,8 +11,8 @@
 
 
 
-var apipath='http://a007.yeapps.com/unileverEon/syncmobile_schedule_eon/';
-var apipath_image = 'http://a007.yeapps.com/unileverEon/';
+var apipath='http://a007.yeapps.com/morderntrade/syncmobile_schedule_eon/';
+var apipath_image = 'http://a007.yeapps.com/morderntrade/';
 
 
 //var apipath='http://e3.businesssolutionapps.com/unilever/syncmobile_schedule/';
