@@ -3226,7 +3226,7 @@ function upload_category(){
 	} 
 	
 	
-	//upload_fd()
+	upload_fd()
 	
 }
 
@@ -3249,7 +3249,7 @@ function upload_fd(){
 		}
 		
 	}
-	upload_qpds();
+//	upload_qpds();
 
 }
 
