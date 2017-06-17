@@ -2471,13 +2471,13 @@ function submit_data() {
 										//$("#outletString").html(localStorage.outletString);
 //										
 //										
-//										$("#outletString").empty();
-//										$("#outletString").append(localStorage.outletString).trigger('create');
+										$("#outletString").empty();
+										$("#outletString").append(localStorage.outletString).trigger('create');
 //										
 //										
 //										
-//										$("#submit_data_check").html("Data Synced Successfully");
-//										$("#submit_data").html('');
+										$("#submit_data_check").html("Data Synced Successfully");
+										$("#submit_data").html('');
 //										localStorage.step_flag=0;
 //										
 //										
