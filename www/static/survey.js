@@ -3261,13 +3261,10 @@ function upload_qpds(){
 		var qpdsSL_image_name=$("#qpdsSL_image_name_hidden_"+i.toString()).val(); 
 		var qpdsSlab=$("#qpdsSL_"+i.toString()).val(); 
 		
-		alert (localStorage.qpdsSlabTotal)
-		alert (qpdsSL_image_path)
-		alert (qpdsSL_image_name)
-		alert (qpds_image_path.length)
-		if (qpds_image_path.length >10){
+		
+		if (qpdsSL_image_path.length >10){
 			uploadPhoto(qpds_image_path, qpdsSL_image_name);
-			alert (qpdsSL_image_name)
+			
 		}
 		else{
 			$("#submit_data").html("Promotion Image Not Available");				
