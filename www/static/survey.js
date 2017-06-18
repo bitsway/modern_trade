@@ -1388,6 +1388,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	//alert ('2')	
 	var FoodsStr=Foods_image_path1+'fdfd'+Foods_image_name1+'fdfd'+Foods_height1+'fdfd'+Foods_width1+'rdrd'
 	FoodsStr=FoodsStr+ Foods_image_path2+'fdfd'+Foods_image_name2+'fdfd'+Foods_height2+'fdfd'+Foods_width2+'rdrd'
+	
 	CategoryStr=CategoryStr+'<Foods>'+FoodsStr+'</Foods>'
 	//alert ('3')
 	
@@ -1400,29 +1401,12 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 		//alert (len(localStorage.CategoryStr))
 		
 		
-		if (CategoryStr.length>10){
+		if (HairCareStr.length > 20 &&  kinCareStr.length > 20 && OralStr.length > 20 && SkinCleansingStr.length > 20 && LaundryStr.length > 20 && HHcleansingStr.length > 20 && FoodsStr.length > 20){
 			var url = "#fixedDisplay";
 			$.mobile.navigate(url);
 		
 		}
-//		else if (localStorage.qpdsSkip==0){
-//			var url = "#qpdsPage";
-//			$.mobile.navigate(url);
-//			
-//		}
-//		else{
-//			var url = "#npdPage";
-//			$.mobile.navigate(url);
-//		}
-		
-		
-		
-		
-		
-		
-	//	$.mobile.navigate(url);
-	//	$(url).trigger('create');
-	//}
+
 }
 //=====================Outlet Exception end=====================
 
@@ -1834,32 +1818,13 @@ function npd_ready_data() {
 	}
 	 localStorage.npd_data=npd_data
 	// alert (localStorage.npd_data)
-//
-////============================================
-//	
-//	npd_page_set();
-//	
-//	
-//	//Local -------------------------
-//	//error_flag_qty_npd=0
-//	//error_image_flag_npd=0
-//	
-//	//------------------------------
-//	
-//	if  ((error_flag_qty_npd==1) || (error_image_flag_npd==1)){
-//		 var url = "#npdPage";
-//		$.mobile.navigate(url);
-//	}
-//	else{
-		//alert (localStorage.outletNameID)
-		//$("#place_outlet_nameID").html(localStorage.outletNameID); 
+
 		$("#place_outlet_nameID1").html(localStorage.outletNameID);
+		
+		if (npd_data.length > 20){
 		var url = "#placePage";
 		$.mobile.navigate(url);
-	//	$('#npd').find('input, textarea, button, select').attr('disabled','disabled');
-//		$('#npd').addClass('disabledAnchor');
-//		localStorage.npd_next_flag=1;
-//	}
+		}
 
 //=====================================
 
@@ -1942,9 +1907,10 @@ function fdisplay_ready_data() {
 		localStorage.fdisplay_data=fdisplay_data
 		
 		//alert (localStorage.fdisplay_data)
+		if (fdisplay_data.length>20){
 		var url = "#qpdsPage";
 		$.mobile.navigate(url);
-
+		}
 
 }
 
@@ -2049,9 +2015,10 @@ function qpds_ready_data() {
 		}
 		localStorage.qpds_data=qpds_data
 		//alert (localStorage.qpds_data)
+		if (qpds_data.length > 20){
 		var url = "#npdPage";
 		$.mobile.navigate(url);
-
+		}
 	
 }
 
@@ -2149,22 +2116,12 @@ function place_ready_data() {
 	place_data=place_data+image_name1+'fdfd'+place_image_path1+'rdrd'+image_name2+'fdfd'+place_image_path2+'rdrd'+image_name3+'fdfd'+place_image_path3+'rdrd';
 	
 	localStorage.place_data=place_data
-	//alert (localStorage.place_data)	
-//	place_page_set();
-//	if ((image_name.length < 10)){
-//	//if ((place_image_path.length > 10)){
+
+	if (place_data.length > 20){
+
 		var url = "#submitPage";
 		$.mobile.navigate(url);
-	////	$('#place_show').find('input, textarea, button, select').attr('disabled','disabled');
-//		$('#place_show').addClass('disabledAnchor');
-//		localStorage.place_next_flag=1;
-//		
-//	}else{
-//		var url = "#placePage";
-//		$.mobile.navigate(url);
-//	}
-	//$('#outlet_info_msg').html(localStorage.outletNameID);
-	//localStorage.latlongSubmit=0;
+	}
 }
 
 function place_page_set() { 
@@ -2884,7 +2841,7 @@ function onFailGift(message) {
 //===========Place======
 //Place
 function get_pic_place(i) {
-	alert (i)
+	//alert (i)
 	var div_id="place_image_div"+i;
 	temp_image_div=div_id;
 	var tempTime = $.now();
