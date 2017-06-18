@@ -3267,9 +3267,7 @@ function upload_posm(){
 	var image_name3=$("#place_image_name_hidden3").val();
 	var image_path3=$("#place_image_div_hidden3").val();
 	
-	alert (image_path1)
-	alert (image_path2)
-	alert (image_path3)
+	
 	
 	if ((image_path1.length >10) && (image_path2.length >10) && (image_path3.length >10)){
 				uploadPhoto(image_path1, image_name1);
