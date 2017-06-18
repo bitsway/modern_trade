@@ -1401,7 +1401,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 		//alert (len(localStorage.CategoryStr))
 		
 		
-		if (HairCareStr.length > 20 &&  kinCareStr.length > 20 && OralStr.length > 20 && SkinCleansingStr.length > 20 && LaundryStr.length > 20 && HHcleansingStr.length > 20 && FoodsStr.length > 20){
+		if (HairCareStr.length > 20 &&  SkinCareStr.length > 20 && OralStr.length > 20 && SkinCleansingStr.length > 20 && LaundryStr.length > 20 && HHcleansingStr.length > 20 && FoodsStr.length > 20){
 			var url = "#fixedDisplay";
 			$.mobile.navigate(url);
 		
