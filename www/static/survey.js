@@ -1401,7 +1401,7 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 		//alert (len(localStorage.CategoryStr))
 		
 		
-		if (HairCareStr.length > 20 &&  SkinCareStr.length > 20 && OralStr.length > 20 && SkinCleansingStr.length > 20 && LaundryStr.length > 20 && HHcleansingStr.length > 20 && FoodsStr.length > 20){
+		if (HairCareStr.length > 50 &&  SkinCareStr.length > 50 && OralStr.length > 50 && SkinCleansingStr.length > 50 && LaundryStr.length > 50 && HHcleansingStr.length > 50 && FoodsStr.length > 50){
 			var url = "#fixedDisplay";
 			$.mobile.navigate(url);
 		
@@ -1821,7 +1821,7 @@ function npd_ready_data() {
 
 		$("#place_outlet_nameID1").html(localStorage.outletNameID);
 		
-		if (npd_data.length > 20){
+		if (npd_data.length > 50){
 		var url = "#placePage";
 		$.mobile.navigate(url);
 		}
@@ -1907,7 +1907,7 @@ function fdisplay_ready_data() {
 		localStorage.fdisplay_data=fdisplay_data
 		
 		//alert (localStorage.fdisplay_data)
-		if (fdisplay_data.length>20){
+		if (fdisplay_data.length>50){
 		var url = "#qpdsPage";
 		$.mobile.navigate(url);
 		}
@@ -2015,7 +2015,7 @@ function qpds_ready_data() {
 		}
 		localStorage.qpds_data=qpds_data
 		//alert (localStorage.qpds_data)
-		if (qpds_data.length > 20){
+		if (qpds_data.length > 50){
 		var url = "#npdPage";
 		$.mobile.navigate(url);
 		}
@@ -2117,7 +2117,7 @@ function place_ready_data() {
 	
 	localStorage.place_data=place_data
 
-	if (place_data.length > 20){
+	if (place_data.length > 50){
 
 		var url = "#submitPage";
 		$.mobile.navigate(url);
