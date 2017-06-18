@@ -2884,6 +2884,7 @@ function onFailGift(message) {
 //===========Place======
 //Place
 function get_pic_place(i) {
+	alert (i)
 	var div_id="place_image_div"+i;
 	temp_image_div=div_id;
 	var tempTime = $.now();
