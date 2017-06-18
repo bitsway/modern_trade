@@ -576,7 +576,7 @@ function check_user() {
 		localStorage.outletString='';
 	//	clear_autho();
    		
-	//alert (apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode)
+	alert (apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode)
 	//$("#error_login").html(apipath+'check_user?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode);	
    		$.ajax({
 				 type: 'POST',
@@ -3401,6 +3401,7 @@ function uploadPhoto(imageURI, imageName) {
 //ft.upload(imageURI, encodeURI("http://127.0.0.1:8000/unilever/syncmobile/fileUploader/"),win,fail,options);
 // ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/syncmobile/fileUploader/"),win,fail,options);
  //ft.upload(imageURI, encodeURI("http://104.199.166.207/mordern_trade_image/mt_image/fileUploader/"),win,fail,options);
+ alert ('http://a007.yeapps.com/morderntrade/syncmobile_schedule_eon/fileUploader/')
  ft.upload(imageURI, encodeURI("http://a007.yeapps.com/morderntrade/syncmobile_schedule_eon/fileUploader/"),win,fail,options);
 }
 
