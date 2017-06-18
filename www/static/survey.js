@@ -1680,7 +1680,8 @@ function syncOutlet() {
 				
 				
 				//================
-				
+				alert (qpdsSL_image_div_hidden)
+				alert (qpdsSL_image_name_hidden)
 				qpdsStringShow=qpdsStringShow+
 						  '<table width="100%" border="0"><tr><td>'+
 						  ' <input type="hidden" name="'+ qpdsSL_f +'" id="'+ qpdsSL_f +'" value="'+qpdsSL+'" min="0">  '+
@@ -3259,6 +3260,11 @@ function upload_qpds(){
 		var qpdsSL_image_path=$("#qpdsSL_image_div_hidden_"+i.toString()).val(); 
 		var qpdsSL_image_name=$("#qpdsSL_image_name_hidden_"+i.toString()).val(); 
 		var qpdsSlab=$("#qpdsSL_"+i.toString()).val(); 
+		alert ("#qpdsSL_image_div_hidden_"+i.toString())
+		alert ("#qpdsSL_image_name_hidden_"+i.toString())
+		alert (localStorage.qpdsSlabTotal)
+		alert (qpdsSL_image_path)
+		alert (qpdsSL_image_name)
 		if (qpds_image_path.length >10){
 			uploadPhoto(qpds_image_path, qpdsSL_image_name);
 		}
