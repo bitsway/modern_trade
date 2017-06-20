@@ -2136,6 +2136,7 @@ function place_ready_data() {
 	if ((place_image_path1!='') && (place_image_path2!='') && (place_image_path3!='')){
 		errorFlag=false
 	}
+	$("#sf_outlet_nameID1").html(localStorage.outletNameID);
 	if (errorFlag==false){
 		//var url = "#submitPage";
 		var url = "#sFPage";
