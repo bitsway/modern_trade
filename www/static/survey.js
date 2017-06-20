@@ -2137,12 +2137,31 @@ function place_ready_data() {
 		errorFlag=false
 	}
 	if (errorFlag==false){
-
+		//var url = "#submitPage";
+		var url = "#sFPage";
+		$.mobile.navigate(url);
+	}
+}
+function sf_ready_data() { 
+	var sf_data="";
+	var image_name=$("#sf_image_name_hidden").val();
+	var sf_image_path=$("#sf_image_div_hidden").val();
+	
+	
+	
+	sf_data=sf_data+image_name+'fdfd'+sf_image_path+'rdrd';
+	
+	localStorage.sf_data=sh_data
+	
+	var errorFlag=true
+	if (sf_image_path!=''){
+		errorFlag=false
+	}
+	if (errorFlag==false){
 		var url = "#submitPage";
 		$.mobile.navigate(url);
 	}
 }
-
 function place_page_set() { 
 	
 	var place_data =  localStorage.place_data_ready.replace("rdrd","");
@@ -2361,7 +2380,7 @@ function submit_data() {
 			localStorage.outletChannel='MT'
 			$.ajax({
 						type: 'POST',
-						url: apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&outlet='+outlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&CategoryStr='+localStorage.CategoryStr+'&npd_data='+localStorage.npd_data+'&fdisplay_data='+localStorage.fdisplay_data+'&qpds_data='+localStorage.qpds_data+'&place_data='+localStorage.place_data,
+						url: apipath+'syncSubmitData?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&outlet='+outlet+'&scheduleDate='+ localStorage.selected_date +'&outletEx='+localStorage.outletException+'&channel='+localStorage.outletChannel+'&latlong='+latlong+'&visitDate='+visitDate+'&startTime='+localStorage.startTime+'&endTime='+endTime+'&CategoryStr='+localStorage.CategoryStr+'&npd_data='+localStorage.npd_data+'&fdisplay_data='+localStorage.fdisplay_data+'&qpds_data='+localStorage.qpds_data+'&place_data='+localStorage.place_data+'&sf_data='+localStorage.sf_data,
 						 success: function(result) {	
 								
 								if (result==''){
@@ -2882,6 +2901,31 @@ function onFailPlace(message) {
     alert('Failed because: ' + message);
 }
 
+//===============SF================
+//===========Place======
+//Place
+function get_pic_sf() {
+	//alert (i)
+	var div_id="sf_image_div";
+	temp_image_div=div_id;
+	var tempTime = $.now();
+	place_image_name=tempTime.toString()+"_"+localStorage.selectedOutlet+"_sf.jpg";
+	$("#sf_image_name_hidden").val(place_image_name);
+	navigator.camera.getPicture(onSuccessSf, onFailSf, { quality: 70,
+		targetWidth: 450,
+		destinationType: Camera.DestinationType.FILE_URI , correctOrientation: true });
+}
+function onSuccessSf(imageURI) {
+	var image = document.getElementById(temp_image_div);
+    image.src = imageURI;
+	var hidden_path=temp_image_div.replace("sf_image_div","sf_image_div_hidden");
+	
+	$("#"+hidden_path).val(imageURI);
+}
+function onFailSf(message) {
+	imagePathA="";
+    alert('Failed because: ' + message);
+}
 //===========Shop======
 //Shop
 function get_pic_shop() {
