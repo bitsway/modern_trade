@@ -2152,7 +2152,7 @@ function sf_ready_data() {
 	
 	sf_data=sf_data+image_name+'fdfd'+sf_image_path+'rdrd';
 	
-	localStorage.sf_data=sh_data
+	localStorage.sf_data=sf_data
 	
 	var errorFlag=true
 	if (sf_image_path!=''){
