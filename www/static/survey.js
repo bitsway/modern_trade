@@ -11,8 +11,8 @@
 
 
 
-var apipath='http://a007.yeapps.com/morderntrade/syncmobile_schedule_eon/';
-var apipath_image = 'http://a007.yeapps.com/morderntrade/';
+var apipath='http://a007.yeapps.com/moderntrade/syncmobile_schedule_eon/';
+var apipath_image = 'http://a007.yeapps.com/moderntrade/';
 
 
 //var apipath='http://e3.businesssolutionapps.com/unilever/syncmobile_schedule/';
@@ -1398,14 +1398,20 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 	//alert ('4')	
 		
 		
-		//alert (len(localStorage.CategoryStr))
+	var errorFlag=true
+	if (HairCare_image_path1!='' && HairCare_height1!='' && HairCare_width1!='' && HairCare_image_path2!='' && HairCare_height2!='' && HairCare_width2!='' && HairCare_image_path3!='' && HairCare_height3!=''	&& HairCare_width3!='' &&  HairCare_image_path4!='' &&  HairCare_height4!='' &&  HairCare_width4!='' &&   SkinCare_image_path1!='' &&   SkinCare_height1!='' &&   SkinCare_width1!='' &&   SkinCare_image_path2!='' &&   SkinCare_height2!='' &&   SkinCare_width2!='' &&   SkinCare_image_path3!='' &&   SkinCare_height3!='' &&   SkinCare_width3!='' &&   Oral_image_path1!='' &&   Oral_height1!='' &&   Oral_width1!='' &&   Oral_image_path2!='' &&   Oral_height2!='' &&   Oral_width2!='' &&   SkinCleansing_image_path1!='' &&   SkinCleansing_height1!='' &&   SkinCleansing_width1!='' &&   SkinCleansing_image_path2!='' &&   SkinCleansing_height2!='' &&   SkinCleansing_width2!='' &&   Laundry_image_path1!='' &&   Laundry_height1!='' &&   Laundry_width1!='' &&   Laundry_image_path2!='' &&   Laundry_height2!='' &&   Laundry_width2!='' &&   HHcleansing_image_path1!='' &&   HHcleansing_height1!='' &&   HHcleansing_width1!='' &&   HHcleansing_image_path2!='' &&   HHcleansing_height2!='' &&   HHcleansing_width2!='' &&   Foods_image_path1!='' &&   Foods_height1!='' &&   Foods_width1!='' &&   Foods_image_path2!='' &&   Foods_height2!='' &&   Foods_width2!=''){
+			errorFlag= false
+			
+			
+			
+		}
 		
-		
-		if (HairCareStr.length > 50 &&  SkinCareStr.length > 50 && OralStr.length > 50 && SkinCleansingStr.length > 50 && LaundryStr.length > 50 && HHcleansingStr.length > 50 && FoodsStr.length > 50){
+		if (errorFlag == false){
 			var url = "#fixedDisplay";
 			$.mobile.navigate(url);
 		
 		}
+		
 
 }
 //=====================Outlet Exception end=====================
@@ -1587,9 +1593,9 @@ function syncOutlet() {
 								
 					
 					//alert ('<a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+'_1)" >Take Picture </a>')
-					fdisplayStringShow=fdisplayStringShow+'<table width="100%" border="0"><tr>'+
-					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay(\'' + slab_1 + '\')" >Take Picture </a></td></tr></table>'+ 
-					'<img id="'+fdSL_image_div+'_1" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
+					//fdisplayStringShow=fdisplayStringShow+'<table width="100%" border="0"><tr>'+
+					//'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay(\'' + slab_1 + '\')" >Take Picture </a></td></tr></table>'+ 
+					fdisplayStringShow=fdisplayStringShow+'<img style="display:none" id="'+fdSL_image_div+'_1" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
 					'<input type="hidden" name="'+ fdSL_image_div_hidden +'_1" id="'+ fdSL_image_div_hidden +'_1" value="" >'+
 					'<input type="hidden" name="'+ fdSL_image_name_hidden +'_1" id="'+ fdSL_image_name_hidden +'_1" value="" >'+
 					'<input type="hidden" name="'+ fdSL_total_hidden +'_1" id="'+ fdSL_total_hidden +'" value="'+fdisplaySingleTotal+'_1" >'		
@@ -1797,23 +1803,24 @@ function mhskus_page_set() {
 
 function npd_ready_data() { 
 	//===============NPD data==================
+	var errorFlag=true
 	var npd_data=""
 //	
 //	var error_flag_qty_npd=0;
 //	var error_image_flag_npd=0;
 //	
 	for (var i=0; i < localStorage.npdTotal-1; i++){
-		//var ItemQtynpd=$( "#ItemQtynpd_"+i.toString()).val();
-//		var Itemnpd=$( "#Itemnpd_"+i.toString()).val();
-//		var minQty=$( "#minQty_npd_"+i.toString()).val(); 
+
 		var npd_image_div_path=$("#npd_image_div_hidden_"+i.toString()).val(); 
 		var npd_image_name_hidden=$("#npd_image_name_hidden_"+i.toString()).val(); 
 		
 		
 		
 		npd_data=npd_data+npd_image_div_path+'fdfd'+npd_image_name_hidden+'rdrd';
-		
-		
+		errorFlag=true
+		if (npd_image_div_path!=''){
+			errorFlag=false
+		}
 		
 	}
 	 localStorage.npd_data=npd_data
@@ -1821,7 +1828,7 @@ function npd_ready_data() {
 
 		$("#place_outlet_nameID1").html(localStorage.outletNameID);
 		
-		if (npd_data.length > 50){
+		if (errorFlag==false){
 		var url = "#placePage";
 		$.mobile.navigate(url);
 		}
@@ -1891,6 +1898,7 @@ function fdisplay_before_page_next() {
 //====================fdisply before page end=======================
 function fdisplay_ready_data() { 
 	//===============fixeddisplay data==================
+	var errorFlag=true
 	var fdisplay_data=""
 	
 	for (var i=0; i < localStorage.fdisplaySlabTotal-1; i++){
@@ -1901,13 +1909,17 @@ function fdisplay_ready_data() {
 		
 		var fdSLfdisplay_image_path1=$("#fdSL_image_div_hidden_"+i.toString()+"_1").val(); 
 		var fdSLfdisplay_image_name1=$("#fdSL_image_name_hidden_"+i.toString()+"_1").val(); 
+		errorFlag=true
+		if (fdSLfdisplay_image_path!=''){
+			errorFlag=false
+		}
 		
 		fdisplay_data=fdisplay_data+fdSLfdisplay_image_path+'fdfd'+fdSLfdisplay_image_name+'fdfd'+fdSLfdisplay_image_path1+'fdfd'+fdSLfdisplay_image_name1+'rdrd'
 	}
 		localStorage.fdisplay_data=fdisplay_data
 		
-		//alert (localStorage.fdisplay_data)
-		if (fdisplay_data.length>50){
+		
+		if (errorFlag==false){
 		var url = "#qpdsPage";
 		$.mobile.navigate(url);
 		}
@@ -2002,7 +2014,7 @@ if (localStorage.before_flag==1){
 
 function qpds_ready_data() { 
 	//===============QPDS data==================
-	
+	var errorFlag=true
 	var qpds_data=""
 	
 	for (var i=0; i < localStorage.qpdsSlabTotal-1; i++){
@@ -2011,11 +2023,14 @@ function qpds_ready_data() {
 		var qpdsSlab=$("#qpdsSL_"+i.toString()).val(); 
 		
 		qpds_data=qpds_data+qpdsSL_image_path+'fdfd'+qpdsSL_image_name+'fdfd'+qpdsSlab+'rdrd'
-		//alert (qpds_data)
+		errorFlag=true
+		if (qpdsSL_image_path!=''){
+			errorFlag=false
+		}
 		}
 		localStorage.qpds_data=qpds_data
 		//alert (localStorage.qpds_data)
-		if (qpds_data.length > 50){
+		if (errorFlag==false){
 		var url = "#npdPage";
 		$.mobile.navigate(url);
 		}
@@ -2116,8 +2131,12 @@ function place_ready_data() {
 	place_data=place_data+image_name1+'fdfd'+place_image_path1+'rdrd'+image_name2+'fdfd'+place_image_path2+'rdrd'+image_name3+'fdfd'+place_image_path3+'rdrd';
 	
 	localStorage.place_data=place_data
-
-	if (place_data.length > 50){
+	
+	var errorFlag=true
+	if ((place_image_path1!='') && (place_image_path2!='') && (place_image_path3!='')){
+		errorFlag=false
+	}
+	if (errorFlag==false){
 
 		var url = "#submitPage";
 		$.mobile.navigate(url);
@@ -3366,8 +3385,8 @@ function uploadPhoto(imageURI, imageName) {
 //ft.upload(imageURI, encodeURI("http://127.0.0.1:8000/unilever/syncmobile/fileUploader/"),win,fail,options);
 // ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/syncmobile/fileUploader/"),win,fail,options);
  //ft.upload(imageURI, encodeURI("http://104.199.166.207/mordern_trade_image/mt_image/fileUploader/"),win,fail,options);
-// alert ('http://a007.yeapps.com/morderntrade/syncmobile_schedule_eon/fileUploader/')
- ft.upload(imageURI, encodeURI("http://a007.yeapps.com/morderntrade/syncmobile_schedule_eon/fileUploader/"),win,fail,options);
+// alert ('http://a007.yeapps.com/moderntrade/syncmobile_schedule_eon/fileUploader/')
+ ft.upload(imageURI, encodeURI("http://a007.yeapps.com/moderntrade/syncmobile_schedule_eon/fileUploader/"),win,fail,options);
 }
 
 function win(r) {
