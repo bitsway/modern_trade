@@ -414,8 +414,8 @@ function cancel_outlet_Back(){
 			$.mobile.navigate(url);
 		}
 		else{
-			//if (imageName.length == 0){
-			if (imagePath.length < 10){
+			///if (imageName.length == 0){
+			if (imagePath.length > 10){
 				$("#c_reason").html('Please Take Picture');
 				$("#cancelButton").show();
 				$("#login_image_cancel").hide();
