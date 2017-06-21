@@ -414,8 +414,8 @@ function cancel_outlet_Back(){
 			$.mobile.navigate(url);
 		}
 		else{
-			///if (imageName.length == 0){
-			if (imagePath.length > 10){
+			//if (imageName.length == 0){
+			if (imagePath.length < 10){
 				$("#c_reason").html('Please Take Picture');
 				$("#cancelButton").show();
 				$("#login_image_cancel").hide();
@@ -430,7 +430,7 @@ function cancel_outlet_Back(){
 			localStorage.routeException=''
 			outletEx=''
 			
-				$("#c_reason").html(apipath+'cancel_outlet?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&selectedRoute='+localStorage.selectedRoute+'&routeEx='+localStorage.routeException+'&outlet='+outletID+'&outletEx='+localStorage.outletException+'&cancel_reason='+cancel_reason+'&imageName='+imageName+'&imagePath='+imagePath+'&latitude='+latitude+'&longitude='+longitude);
+				//$("#c_reason").html(apipath+'cancel_outlet?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&selectedRoute='+localStorage.selectedRoute+'&routeEx='+localStorage.routeException+'&outlet='+outletID+'&outletEx='+localStorage.outletException+'&cancel_reason='+cancel_reason+'&imageName='+imageName+'&imagePath='+imagePath+'&latitude='+latitude+'&longitude='+longitude);
 					$.ajax({
 						 type: 'POST',
 						 url: apipath+'cancel_outlet?cid='+localStorage.cid+'&cm_id='+localStorage.cm_id+'&cm_pass='+localStorage.cm_pass+'&synccode='+localStorage.synccode+'&selectedRoute='+localStorage.selectedRoute+'&routeEx='+localStorage.routeException+'&outlet='+outletID+'&outletEx='+localStorage.outletException+'&cancel_reason='+cancel_reason+'&imageName='+imageName+'&imagePath='+imagePath+'&latitude='+latitude+'&longitude='+longitude,
@@ -639,7 +639,7 @@ function check_user() {
 								var cancel_combo_str='<select name="cancel_cause" id="cancel_cause" >'
 								cancel_combo_str=cancel_combo_str+'<option value=""></option>'
 								cancel_combo_str=cancel_combo_str+'<option value="Will try later">Will try later</option>'
-								for (var i=0; i < cancelArray.length; i++){				
+								for (var i=0; i < cancelArray.length-1; i++){				
 									cancel_combo_str=cancel_combo_str +'<option value="'+cancelArray[i].split('fdfd')[0]+'">'+cancelArray[i].split('fdfd')[1]+'</option>'			  	
 								}
 								cancel_combo_str=cancel_combo_str+'</select>'
