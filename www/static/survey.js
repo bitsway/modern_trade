@@ -1418,6 +1418,244 @@ HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+
 		
 
 }
+
+
+//==============================================================
+//==================Set cat data======================
+function Cat_page_set() { 
+	var CategoryStr=localStorage.CategoryStr
+	var HairCare=CategoryStr.split('<HairCare>')[1].split('</HairCare>')[0]
+	var SkinCare=CategoryStr.split('<SkinCare>')[1].split('</SkinCare>')[0]
+	var Oral=CategoryStr.split('<Oral>')[1].split('</Oral>')[0]
+	var SkinCleansing=CategoryStr.split('<SkinCleansing>')[1].split('</SkinCleansing>')[0]
+	var Laundry=CategoryStr.split('<Laundry>')[1].split('</Laundry>')[0]
+	var HouseHoldcleansing=CategoryStr.split('<HouseHoldcleansing>')[1].split('</HouseHoldcleansing>')[0]
+	var Foods=CategoryStr.split('<Foods>')[1].split('</Foods>')[0]
+	
+	HairCareList=HairCare.split('rdrd')
+	
+	HairCare_image_path1=HairCareList[0].split('fdfd')[0]
+	HairCare_image_name1=HairCareList[0].split('fdfd')[1]
+	HairCare_height1=HairCareList[0].split('fdfd')[2]
+	HairCare_width1=HairCareList[0].split('fdfd')[3]
+	
+	HairCare_image_path2=HairCareList[1].split('fdfd')[0]
+	HairCare_image_name2=HairCareList[1].split('fdfd')[1]
+	HairCare_height2=HairCareList[1].split('fdfd')[2]
+	HairCare_width2=HairCareList[1].split('fdfd')[3]
+	
+	HairCare_image_path3=HairCareList[2].split('fdfd')[0]
+	HairCare_image_name3=HairCareList[2].split('fdfd')[1]
+	HairCare_height3=HairCareList[2].split('fdfd')[2]
+	HairCare_width3=HairCareList[2].split('fdfd')[3]
+	
+	HairCare_image_path4=HairCareList[3].split('fdfd')[0]
+	HairCare_image_name4=HairCareList[3].split('fdfd')[1]
+	HairCare_height4=HairCareList[3].split('fdfd')[2]
+	HairCare_width4=HairCareList[3].split('fdfd')[3]
+	
+	var image = document.getElementById('HairCare_image_div1');
+    image.src = HairCare_image_path1;	
+	var image1 = document.getElementById('HairCare_image_div2');
+    image1.src = HairCare_image_path2;	
+	var image2 = document.getElementById('HairCare_image_div3');
+    image2.src = HairCare_image_path3;	
+	var image3 = document.getElementById('HairCare_image_div4');
+    image3.src = HairCare_image_path4;
+		
+	$("#HairCare_image_div_hidden1").val(HairCare_image_path1); 
+	$("#HairCare_image_name_hidden1").val(HairCare_image_name1);
+	$("#HairCare_height1").val(HairCare_height1);
+	$("#HairCare_width1").val(HairCare_width1);
+
+	//Get Category Value
+	
+	$("#HairCare_image_div_hidden2").val(HairCare_image_path2); 
+	$("#HairCare_image_name_hidden2").val(HairCare_image_name2);
+	$("#HairCare_height2").val(HairCare_height2);
+	$("#HairCare_width2").val(HairCare_width2);
+	
+	$("#HairCare_image_div_hidden3").val(HairCare_image_path3); 
+	$("#HairCare_image_name_hidden3").val(HairCare_image_name3);
+	$("#HairCare_height3").val(HairCare_height3);
+	$("#HairCare_width3").val(HairCare_width3);
+	
+	$("#HairCare_image_div_hidden4").val(HairCare_image_path4); 
+	$("#HairCare_image_name_hidden4").val(HairCare_image_name4);
+	$("#HairCare_height4").val(HairCare_height4);
+	$("#HairCare_width4").val(HairCare_width4);
+	
+
+	
+//	==========================================================================
+	SkinCare=SkinCare.split('rdrd')
+	
+	SkinCare_image_path1=SkinCareList[0].split('fdfd')[0]
+	SkinCare_image_name1=SkinCareList[0].split('fdfd')[1]
+	SkinCare_height1=SkinCareList[0].split('fdfd')[2]
+	SkinCare_width1=SkinCareList[0].split('fdfd')[3]
+	
+	SkinCare_image_path2=SkinCareList[1].split('fdfd')[0]
+	SkinCare_image_name2=SkinCareList[1].split('fdfd')[1]
+	SkinCare_height2=SkinCareList[1].split('fdfd')[2]
+	SkinCare_width2=SkinCareList[1].split('fdfd')[3]
+	
+	SkinCare_image_path3=SkinCareList[2].split('fdfd')[0]
+	SkinCare_image_name3=SkinCareList[2].split('fdfd')[1]
+	SkinCare_height3=SkinCareList[2].split('fdfd')[2]
+	SkinCare_width3=SkinCareList[2].split('fdfd')[3]
+	
+	
+	
+	var image = document.getElementById('SkinCare_image_div1');
+    image.src = SkinCare_image_path1;	
+	var image1 = document.getElementById('SkinCare_image_div2');
+    image1.src = SkinCare_image_path2;	
+	var image2 = document.getElementById('SkinCare_image_div3');
+    image2.src = SkinCare_image_path3;	
+	
+	$("#SkinCare_image_div_hidden1").val(SkinCare_image_path1); 
+	$("#SkinCare_image_name_hidden1").val(SkinCare_image_name1);
+	$("#SkinCare_height1").val(SkinCare_height1);
+	$("#SkinCare_width1").val(SkinCare_width1);
+	
+	$("#SkinCare_image_div_hidden2").val(SkinCare_image_path2); 
+	$("#SkinCare_image_name_hidden2").val(SkinCare_image_name2);
+	$("#SkinCare_height2").val(SkinCare_height2);
+	$("#SkinCare_width2").val(SkinCare_width2);
+	
+	$("#SkinCare_image_div_hidden3").val(SkinCare_image_path3); 
+	$("#SkinCare_image_name_hidden3").val(SkinCare_image_name3);
+	$("#SkinCare_height3").val(SkinCare_height3);
+	$("#SkinCare_width3").val(SkinCare_width3);
+	
+	
+	
+	
+	
+	//SkinCleansing============================================================
+	SkinCleansing=SkinCleansing.split('rdrd')
+	
+	SkinCleansing_image_path1=SkinCleansingList[0].split('fdfd')[0]
+	SkinCleansing_image_name1=SkinCleansingList[0].split('fdfd')[1]
+	SkinCleansing_height1=SkinCleansingList[0].split('fdfd')[2]
+	SkinCleansing_width1=SkinCleansingList[0].split('fdfd')[3]
+	
+	SkinCleansing_image_path2=SkinCleansingList[1].split('fdfd')[0]
+	SkinCleansing_image_name2=SkinCleansingList[1].split('fdfd')[1]
+	SkinCleansing_height2=SkinCleansingList[1].split('fdfd')[2]
+	SkinCleansing_width2=SkinCleansingList[1].split('fdfd')[3]
+	
+	var image = document.getElementById('SkinCleansing_image_div1');
+    image.src = SkinCleansing_image_path1;	
+	var image1 = document.getElementById('SkinCleansing_image_div2');
+    image1.src = SkinCleansing_image_path2;	
+	
+	$("#SkinCleansing_image_div_hidden1").val(SkinCleansing_image_path1); 
+	$("#SkinCleansing_image_name_hidden1").val(SkinCleansing_image_name1);
+	$("#SkinCleansing_height1").val(SkinCleansing_height1);
+	$("#SkinCleansing_width1").val(SkinCleansing_width1);
+	
+	$("#SkinCleansing_image_div_hidden2").val(SkinCleansing_image_path2); 
+	$("#SkinCleansing_image_name_hidden2").val(SkinCleansing_image_name2);
+	$("#SkinCleansing_height2").val(SkinCleansing_height2);
+	$("#SkinCleansing_width2").val(SkinCleansing_width2);
+	
+	//Laundry==========================================================================
+	Laundry=Laundry.split('rdrd')
+	
+	Laundry_image_path1=LaundryList[0].split('fdfd')[0]
+	Laundry_image_name1=LaundryList[0].split('fdfd')[1]
+	Laundry_height1=LaundryList[0].split('fdfd')[2]
+	Laundry_width1=LaundryList[0].split('fdfd')[3]
+	
+	Laundry_image_path2=LaundryList[1].split('fdfd')[0]
+	Laundry_image_name2=LaundryList[1].split('fdfd')[1]
+	Laundry_height2=LaundryList[1].split('fdfd')[2]
+	Laundry_width2=LaundryList[1].split('fdfd')[3]
+	
+	var image = document.getElementById('Laundry_image_div1');
+    image.src = Laundry_image_path1;	
+	var image1 = document.getElementById('Laundry_image_div2');
+    image1.src = Laundry_image_path2;	
+	
+	$("#Laundry_image_div_hidden1").val(Laundry_image_path1); 
+	$("#Laundry_image_name_hidden1").val(Laundry_image_name1);
+	$("#Laundry_height1").val(Laundry_height1);
+	$("#Laundry_width1").val(Laundry_width1);
+	
+	$("#Laundry_image_div_hidden2").val(Laundry_image_path2); 
+	$("#Laundry_image_name_hidden2").val(Laundry_image_name2);
+	$("#Laundry_height2").val(Laundry_height2);
+	$("#Laundry_width2").val(Laundry_width2);
+
+	
+	//HouseHoldcleansing===============================================================
+	HouseHoldcleansing=HouseHoldcleansing.split('rdrd')
+	
+	HouseHoldcleansing_image_path1=HouseHoldcleansingList[0].split('fdfd')[0]
+	HouseHoldcleansing_image_name1=HouseHoldcleansingList[0].split('fdfd')[1]
+	HouseHoldcleansing_height1=HouseHoldcleansingList[0].split('fdfd')[2]
+	HouseHoldcleansing_width1=HouseHoldcleansingList[0].split('fdfd')[3]
+	
+	HouseHoldcleansing_image_path2=HouseHoldcleansingList[1].split('fdfd')[0]
+	HouseHoldcleansing_image_name2=HouseHoldcleansingList[1].split('fdfd')[1]
+	HouseHoldcleansing_height2=HouseHoldcleansingList[1].split('fdfd')[2]
+	HouseHoldcleansing_width2=HouseHoldcleansingList[1].split('fdfd')[3]
+	
+	var image = document.getElementById('HHcleansing_image_div1');
+    image.src = HouseHoldcleansing_image_path1;	
+	var image1 = document.getElementById('HHcleansing_image_div2');
+    image1.src = HouseHoldcleansing_image_path2;	
+	
+	
+	
+	$("#HHcleansing_image_div_hidden1").val(HouseHoldcleansing_image_path1); 
+	$("#HHcleansing_image_name_hidden1").val(HouseHoldcleansing_image_name1);
+	$("#HHcleansing_height1").val(HouseHoldcleansing_height1);
+	$("#HHcleansing_width1").val(HouseHoldcleansing_width1);
+	
+	$("#HHcleansing_image_div_hidden2").val(HouseHoldcleansing_image_path2); 
+	$("#HHcleansing_image_name_hidden2").val(HouseHoldcleansing_image_name2);
+	$("#HHcleansing_height2").val(HouseHoldcleansing_height2);
+	$("#HHcleansing_width2").val(HouseHoldcleansing_width2);
+	
+
+	//Foods	==============================================================
+	
+	Foods=Foods.split('rdrd')
+	
+	Foods_image_path1=FoodsList[0].split('fdfd')[0]
+	Foods_image_name1=FoodsList[0].split('fdfd')[1]
+	Foods_height1=FoodsList[0].split('fdfd')[2]
+	Foods_width1=FoodsList[0].split('fdfd')[3]
+	
+	Foods_image_path2=FoodsList[1].split('fdfd')[0]
+	Foods_image_name2=FoodsList[1].split('fdfd')[1]
+	Foods_height2=FoodsList[1].split('fdfd')[2]
+	Foods_width2=FoodsList[1].split('fdfd')[3]
+	
+	var image = document.getElementById('Foods_image_div1');
+    image.src = Foods_image_path1;	
+	var image1 = document.getElementById('Foods_image_div1');
+    image1.src = Foods_image_path2;	
+	
+	$("#Foods_image_div_hidden1").val(Foods_image_path1); 
+	$("#Foods_image_name_hidden1").val(Foods_image_name1);
+	$("#Foods_height1").val(Foods_height1);
+	$("#Foods_width1").val(Foods_width1);
+	//alert ('1')
+	$("#Foods_image_div_hidden2").val(Foods_image_path2); 
+	$("#Foods_image_name_hidden2").val(Foods_image_name2);
+	$("#Foods_height2").val(Foods_height2);
+	$("#Foods_width2").val(Foods_width2);
+	
+	
+		
+
+}
+
+
 //=====================Outlet Exception end=====================
 
 
@@ -1840,11 +2078,36 @@ function npd_ready_data() {
 //=====================================
 
 }
+
+function sf_page_set() { 
+	
+	var sf_data =  localStorage.sf_data_ready.replace("rdrd","");
+	
+	var sf_array =  sf_data[0].split('fdfd');
+	
+	
+	var image_name = sf_array[0];
+	var sf_image_path1 = sf_array[1];
+	
+	$("#sf_image_name_hidden").val(image_name);
+	$("#sf_image_div_hidden").val(sf_image_path);
+
+	var image = document.getElementById('sf_image_div');
+	image.src = sf_image_path;
+
+	//if (localStorage.place_next_flag==1){
+	//	$('#place_show').find('input, textarea, button, select').attr('disabled','disabled');
+	//	$('#place_show').addClass('disabledAnchor');	
+	//}
+	
+	localStorage.submit_count=0;
+	//getlocationand_askhelp();
+}
 function npd_page_set() { 
 	var npd_array =  localStorage.npd_data_ready.split('rdrd');
 	 for (var i=0; i < npd_array.length-1; i++){
 		var npd_single_array = npd_array[i].split('fdfd');	
-		var itemQty=npd_single_array[1];
+		//var itemQty=npd_single_array[1];
 		var npd_image_div_path=npd_single_array[3];
 		var npd_image_name_hidden=npd_single_array[4];
 		
@@ -1853,7 +2116,7 @@ function npd_page_set() {
 		$("#npd_image_div_hidden_"+i.toString()).val(npd_image_div_path); 
 		$("#npd_image_name_hidden_"+i.toString()).val(npd_image_name_hidden); 
 		
-		$("#ItemQtynpd_"+i.toString()).val(itemQty);
+		//$("#ItemQtynpd_"+i.toString()).val(itemQty);
 		
 		var image = document.getElementById('npd_image_div_'+i.toString());
     	image.src = npd_image_div_path;
@@ -1957,16 +2220,16 @@ if (localStorage.fdisplay_data_ready.length > 10){
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg);
 		
 		
-		$("#fdSL_image_div_hidden_"+i.toString()+"_before").val(fdisplayImg_path_before); 
-		$("#fdSL_image_name_hidden_"+i.toString()+"_before").val(fdisplayImg_before);
+		//$("#fdSL_image_div_hidden_"+i.toString()+"_before").val(fdisplayImg_path_before); 
+		//$("#fdSL_image_name_hidden_"+i.toString()+"_before").val(fdisplayImg_before);
 			
 		
 		
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
     	image.src = fdisplayImg_path;
 		
-		var image_before = document.getElementById('fdSL_image_div_'+i.toString()+"_before");
-    	image_before.src = fdisplayImg_path_before;
+		//var image_before = document.getElementById('fdSL_image_div_'+i.toString()+"_before");
+    	//image_before.src = fdisplayImg_path_before;
 		
 		
 		//==============
@@ -1975,29 +2238,29 @@ if (localStorage.fdisplay_data_ready.length > 10){
 		
 		
 		
-		var fdisplay_detail_array =  fdisplay_detail.split('detaildetail');
-		
-		var fdisplay_detail_n=fdisplay_detail_array[i]
-		
-		var fdisplay_detail_s_array_1 =  fdisplay_detail_n.split('rdrd');
-		var fdTotal_detail=fdisplay_detail_s_array_1.length
-		
-				for (var d=0; d < fdTotal_detail-1; d++){
-					
-					var fdisplay_detail_s_array =  fdisplay_detail_s_array_1[d].split('fdfd');
-					
-					var ItemQtyfdisplay= fdisplay_detail_s_array[1];
-					var ItemFaceupfdisplay= fdisplay_detail_s_array[2];
-					var ItemVisiblefdisplay= fdisplay_detail_s_array[3];
-					
-					$("#ItemQtyfdisplay_"+i.toString()+"_"+d.toString()).val(ItemQtyfdisplay);
-					$("#ItemFaceupfdisplay_"+i.toString()+"_"+d.toString()).val(ItemFaceupfdisplay);
-					if (ItemVisiblefdisplay=='YES'){
-						$("#ItemVisiblefdisplay_"+i.toString()+"_"+d.toString()).attr('checked',true);
-					} //endif
-
-			
-				}//end for
+		//var fdisplay_detail_array =  fdisplay_detail.split('detaildetail');
+//		
+//		var fdisplay_detail_n=fdisplay_detail_array[i]
+//		
+//		var fdisplay_detail_s_array_1 =  fdisplay_detail_n.split('rdrd');
+		//var fdTotal_detail=fdisplay_detail_s_array_1.length
+//		
+//				for (var d=0; d < fdTotal_detail-1; d++){
+//					
+//					var fdisplay_detail_s_array =  fdisplay_detail_s_array_1[d].split('fdfd');
+//					
+//					var ItemQtyfdisplay= fdisplay_detail_s_array[1];
+//					var ItemFaceupfdisplay= fdisplay_detail_s_array[2];
+//					var ItemVisiblefdisplay= fdisplay_detail_s_array[3];
+//					
+//					$("#ItemQtyfdisplay_"+i.toString()+"_"+d.toString()).val(ItemQtyfdisplay);
+//					$("#ItemFaceupfdisplay_"+i.toString()+"_"+d.toString()).val(ItemFaceupfdisplay);
+//					if (ItemVisiblefdisplay=='YES'){
+//						$("#ItemVisiblefdisplay_"+i.toString()+"_"+d.toString()).attr('checked',true);
+//					} //endif
+//
+//			
+//				}//end for
 			
 	
 		
@@ -2086,30 +2349,30 @@ if (localStorage.qpds_data_ready.length > 10){
 //			$('#qpdsdiv_'+i.toString()).find('input, textarea, button, select').attr('disabled','disabled');
 //		}
 		
-		var qpds_detail_array =  qpds_detail.split('detaildetail');
-		var qpds_detail_n =  qpds_detail_array[i];
-		var qpds_detail_s_array_1=qpds_detail_n.split('rdrd');
-		var qpdsDTotal=qpds_detail_s_array_1.length
+		//var qpds_detail_array =  qpds_detail.split('detaildetail');
+//		var qpds_detail_n =  qpds_detail_array[i];
+//		var qpds_detail_s_array_1=qpds_detail_n.split('rdrd');
+//		var qpdsDTotal=qpds_detail_s_array_1.length
 		//alert ("nn") ;
 
 			
-			for (var d=0; d < qpdsDTotal-1; d++){
-				
-				var qpds_detail_s_array =  qpds_detail_s_array_1[d].split('fdfd');
-				
-				var ItemQtyqpds = qpds_detail_s_array[1];
-				var ItemFaceupqpds = qpds_detail_s_array[2];
-				var ItemVisibleqpds = qpds_detail_s_array[3];
-				
-				
-				
-				$("#ItemQtyqpds_"+i.toString()+"_"+d.toString()).val(ItemQtyqpds);
-				$("#ItemFaceupqpds_"+i.toString()+"_"+d.toString()).val(ItemFaceupqpds);
-				if (ItemVisibleqpds=='YES'){
-					$("#ItemVisibleqpds_"+i.toString()+"_"+d.toString()).attr('checked',true);
-				}
-
-			}
+			//for (var d=0; d < qpdsDTotal-1; d++){
+//				
+//				var qpds_detail_s_array =  qpds_detail_s_array_1[d].split('fdfd');
+//				
+//				var ItemQtyqpds = qpds_detail_s_array[1];
+//				var ItemFaceupqpds = qpds_detail_s_array[2];
+//				var ItemVisibleqpds = qpds_detail_s_array[3];
+//				
+//				
+//				
+//				$("#ItemQtyqpds_"+i.toString()+"_"+d.toString()).val(ItemQtyqpds);
+//				$("#ItemFaceupqpds_"+i.toString()+"_"+d.toString()).val(ItemFaceupqpds);
+//				if (ItemVisibleqpds=='YES'){
+//					$("#ItemVisibleqpds_"+i.toString()+"_"+d.toString()).attr('checked',true);
+//				}
+//
+//			}
 	}
 }// End if
 
@@ -2168,44 +2431,39 @@ function sf_ready_data() {
 	}
 }
 function place_page_set() { 
-	
 	var place_data =  localStorage.place_data_ready.replace("rdrd","");
 	
-	var place_array =  place_data.split('fdfd');
+	var place_array1 =  place_data[0].split('fdfd');
+	var place_array2 =  place_data[1].split('fdfd');
+	var place_array3 =  place_data[1].split('fdfd');
 	
-	var image_name = place_array[0];
-	var place_image_path = place_array[1];
-	//var place_value = place_array[2];
-	var is_near_inFront_actual= place_array[2];
-	var is_beside_adjacent_actual= place_array[3];
-	var is_eyeLevel_actual= place_array[4];
-	var is_clearlyVis_noObs_actual= place_array[5];
+	var image_name1 = place_array1[0];
+	var place_image_path1 = place_array1[1];
 	
+	var image_name2 = place_array2[0];
+	var place_image_path2 = place_array2[1];
 	
-	$("#place_image_name_hidden").val(image_name);
-	$("#place_image_div_hidden").val(place_image_path);
+	var image_name3 = place_array3[0];
+	var place_image_path3 = place_array3[1];
 	
-	$("#is_near_inFront_actual").val(is_near_inFront_actual);
-	$("#is_beside_adjacent_actual").val(is_beside_adjacent_actual);
-	$("#is_eyeLevel_actual").val(is_eyeLevel_actual);
-	$("#is_clearlyVis_noObs_actual").val(is_clearlyVis_noObs_actual);
-	//$("#place_value").val(place_value);
+
+	$("#place_image_name_hidden1").val(image_name1);
+	$("#place_image_div_hidden1").val(place_image_path1);
 	
-	if (is_near_inFront_actual==1){
-		document.getElementById("is_near_inFront_actual").checked = true;
-	}
-	if (is_beside_adjacent_actual==1){
-		document.getElementById("is_beside_adjacent_actual").checked = true;
-	}
-	if (is_eyeLevel_actual==1){
-		document.getElementById("is_eyeLevel_actual").checked = true;
-	}
-	if (is_clearlyVis_noObs_actual==1){
-		document.getElementById("is_clearlyVis_noObs_actual").checked = true;
-	}
+	$("#place_image_name_hidden2").val(image_name2);
+	$("#place_image_div_hidden2").val(place_image_path2);
 	
-	var image = document.getElementById('place_image_div');
-	image.src = place_image_path;
+	$("#place_image_name_hidden3").val(image_name3);
+	$("#place_image_div_hidden3").val(place_image_path3);
+
+	var image1 = document.getElementById('place_image_div1');
+	image1.src = place_image_path1;
+	
+	var image2 = document.getElementById('place_image_div2');
+	image2.src = place_image_path2;
+	
+	var image3 = document.getElementById('place_image_div3');
+	image3.src = place_image_path3;
 	
 	
 	if (localStorage.place_next_flag==1){
