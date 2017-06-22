@@ -1432,7 +1432,18 @@ function Cat_page_set() {
 	var HouseHoldcleansing=CategoryStr.split('<HouseHoldcleansing>')[1].split('</HouseHoldcleansing>')[0]
 	var Foods=CategoryStr.split('<Foods>')[1].split('</Foods>')[0]
 	
+	alert ('HairCareList:'+HairCareList)
+	alert ('HairCareList:'+HairCareList)
+	alert ('HairCareList:'+HairCareList)
+	alert ('HairCareList:'+HairCareList)
+	
 	HairCareList=HairCare.split('rdrd')
+	SkinCareList=SkinCare.split('rdrd')
+	OralList=Oral.split('rdrd')
+	SkinCleansingList=SkinCleansing.split('rdrd')
+	LaundryList=Laundry.split('rdrd')
+	HouseHoldcleansingList=HouseHoldcleansing.split('rdrd')
+	FoodsList=Foods.split('rdrd')
 	
 	HairCare_image_path1=HairCareList[0].split('fdfd')[0]
 	HairCare_image_name1=HairCareList[0].split('fdfd')[1]
@@ -1453,6 +1464,8 @@ function Cat_page_set() {
 	HairCare_image_name4=HairCareList[3].split('fdfd')[1]
 	HairCare_height4=HairCareList[3].split('fdfd')[2]
 	HairCare_width4=HairCareList[3].split('fdfd')[3]
+	
+	
 	
 	var image = document.getElementById('HairCare_image_div1');
     image.src = HairCare_image_path1;	
@@ -1488,7 +1501,7 @@ function Cat_page_set() {
 
 	
 //	==========================================================================
-	SkinCare=SkinCare.split('rdrd')
+	//SkinCare=SkinCare.split('rdrd')
 	
 	SkinCare_image_path1=SkinCareList[0].split('fdfd')[0]
 	SkinCare_image_name1=SkinCareList[0].split('fdfd')[1]
@@ -1534,7 +1547,7 @@ function Cat_page_set() {
 	
 	
 	//SkinCleansing============================================================
-	SkinCleansing=SkinCleansing.split('rdrd')
+	//SkinCleansing=SkinCleansing.split('rdrd')
 	
 	SkinCleansing_image_path1=SkinCleansingList[0].split('fdfd')[0]
 	SkinCleansing_image_name1=SkinCleansingList[0].split('fdfd')[1]
@@ -1562,7 +1575,7 @@ function Cat_page_set() {
 	$("#SkinCleansing_width2").val(SkinCleansing_width2);
 	
 	//Laundry==========================================================================
-	Laundry=Laundry.split('rdrd')
+	//Laundry=Laundry.split('rdrd')
 	
 	Laundry_image_path1=LaundryList[0].split('fdfd')[0]
 	Laundry_image_name1=LaundryList[0].split('fdfd')[1]
@@ -1591,7 +1604,7 @@ function Cat_page_set() {
 
 	
 	//HouseHoldcleansing===============================================================
-	HouseHoldcleansing=HouseHoldcleansing.split('rdrd')
+	//HouseHoldcleansing=HouseHoldcleansing.split('rdrd')
 	
 	HouseHoldcleansing_image_path1=HouseHoldcleansingList[0].split('fdfd')[0]
 	HouseHoldcleansing_image_name1=HouseHoldcleansingList[0].split('fdfd')[1]
@@ -1623,7 +1636,7 @@ function Cat_page_set() {
 
 	//Foods	==============================================================
 	
-	Foods=Foods.split('rdrd')
+	//Foods=Foods.split('rdrd')
 	
 	Foods_image_path1=FoodsList[0].split('fdfd')[0]
 	Foods_image_name1=FoodsList[0].split('fdfd')[1]
