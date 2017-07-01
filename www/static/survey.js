@@ -1433,8 +1433,8 @@ function Cat_page_set() {
 	var Foods=CategoryStr.split('<Foods>')[1].split('</Foods>')[0]
 	
 	alert ('CategoryStr:'+CategoryStr)
-	alert ('HairCareList:'+HairCareList)
-	alert ('HairCareList:'+HairCareList)
+	alert (CategoryStr.split('<HairCare>')[1])
+	alert ('SkinCare:'+SkinCare)
 	alert ('HairCareList:'+HairCareList)
 	alert ('HairCareList:'+HairCareList)
 	
