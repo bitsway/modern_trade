@@ -1466,7 +1466,10 @@ function Cat_page_set() {
 	HairCare_width4=HairCareList[3].split('fdfd')[3]
 	
 	
-	
+	alert (HairCare_image_path1)
+	alert (HairCare_image_path2)
+	alert (HairCare_image_path3)
+	alert (HairCare_image_path4)
 	var image = document.getElementById('HairCare_image_div1');
     image.src = HairCare_image_path1;	
 	var image1 = document.getElementById('HairCare_image_div2');
