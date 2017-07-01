@@ -1432,6 +1432,7 @@ function Cat_page_set() {
 	var HouseHoldcleansing=CategoryStr.split('<HouseHoldcleansing>')[1].split('</HouseHoldcleansing>')[0]
 	var Foods=CategoryStr.split('<Foods>')[1].split('</Foods>')[0]
 	
+	alert ('CategoryStr:'+CategoryStr)
 	alert ('HairCareList:'+HairCareList)
 	alert ('HairCareList:'+HairCareList)
 	alert ('HairCareList:'+HairCareList)
