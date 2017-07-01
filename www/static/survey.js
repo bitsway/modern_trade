@@ -1295,7 +1295,7 @@ HairCareStr=HairCareStr+HairCare_image_path3+'fdfd'+HairCare_image_name3+'fdfd'+
 HairCareStr=HairCareStr+HairCare_image_path4+'fdfd'+HairCare_image_name4+'fdfd'+HairCare_height4+'fdfd'+HairCare_width4+'rdrd'
 	
 	
-	CategoryStr='<HairCare>'+HairCareStr+'</HairCare>'                      
+	CategoryStr='<HairCare>'+HairCareStr+'</HairCare> '                      
 	
 	//SkinCare
 	var SkinCare_image_path1=$("#SkinCare_image_div_hidden1").val(); 
