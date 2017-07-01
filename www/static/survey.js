@@ -370,23 +370,25 @@ function shop_ready_data() {
 	shop_page_set();
 }
 function shop_page_set() { 
-	var shop_data =  localStorage.shop_data_ready.replace("rdrd","");
-	var shop_array =  shop_data.split('fdfd');
-	var image_name = shop_array[0];
-	var shop_image_path = shop_array[1];
-	
-	$("#shop_image_name_hidden").val(image_name);
-	$("#shop_image_div_hidden").val(shop_image_path );
-	
-	
-	var image = document.getElementById('shop_image_div');
-    image.src = shop_image_path;
+	alert ('Shop')
+	if (localStorage.shop_data_ready.length > 10){
+		var shop_data =  localStorage.shop_data_ready.replace("rdrd","");
+		var shop_array =  shop_data.split('fdfd');
+		var image_name = shop_array[0];
+		var shop_image_path = shop_array[1];
 		
-	if (localStorage.shop_next_flag==1){
-		$('#shop_show').find('input, textarea, button, select').attr('disabled','disabled');
-	    $('#shop_show').addClass('disabledAnchor');	
+		$("#shop_image_name_hidden").val(image_name);
+		$("#shop_image_div_hidden").val(shop_image_path );
+		
+		
+		var image = document.getElementById('shop_image_div');
+		image.src = shop_image_path;
+			
+		if (localStorage.shop_next_flag==1){
+			$('#shop_show').find('input, textarea, button, select').attr('disabled','disabled');
+			$('#shop_show').addClass('disabledAnchor');	
+		}
 	}
-	
 }
 
 
@@ -2233,7 +2235,7 @@ function fdisplay_ready_data() {
 }
 
 function fdisplay_page_set() { 
-
+alert ('fdisplay_page_set')
 if (localStorage.fdisplay_data_ready.length > 10){
 	var fdisplay_array =  localStorage.fdisplay_data_ready.split('headend');
 	var fdisplay_head=fdisplay_array[0].replace("headstart","");
