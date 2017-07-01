@@ -1432,14 +1432,6 @@ function Cat_page_set() {
 	var HouseHoldcleansing=CategoryStr.split('<HouseHoldcleansing>')[1].split('</HouseHoldcleansing>')[0]
 	var Foods=CategoryStr.split('<Foods>')[1].split('</Foods>')[0]
 	
-	alert ('CategoryStr:'+CategoryStr)
-	alert ('HairCare:'+ HairCare)
-	alert ('SkinCare:'+SkinCare)
-	alert ('Oral:'+Oral)
-	alert ('SkinCleansing:'+SkinCleansing)
-	alert ('Laundry:'+Laundry)
-	alert ('HouseHoldcleansing:'+HouseHoldcleansing)
-	alert ('Foods:'+Foods)
 	
 	HairCareList=HairCare.split('rdrd')
 	SkinCareList=SkinCare.split('rdrd')
@@ -1470,10 +1462,7 @@ function Cat_page_set() {
 	HairCare_width4=HairCareList[3].split('fdfd')[3]
 	
 	
-	alert (HairCare_image_path1)
-	alert (HairCare_image_path2)
-	alert (HairCare_image_path3)
-	alert (HairCare_image_path4)
+	
 	var image = document.getElementById('HairCare_image_div1');
     image.src = HairCare_image_path1;	
 	var image1 = document.getElementById('HairCare_image_div2');
@@ -1550,6 +1539,36 @@ function Cat_page_set() {
 	$("#SkinCare_width3").val(SkinCare_width3);
 	
 	
+	//===========================Oral====================
+	//	==========================================================================
+
+	
+	Oral_image_path1=OralList[0].split('fdfd')[0]
+	Oral_image_name1=OralList[0].split('fdfd')[1]
+	Oral_height1=OralList[0].split('fdfd')[2]
+	Oral_width1=OralList[0].split('fdfd')[3]
+	
+	Oral_image_path2=OralList[1].split('fdfd')[0]
+	Oral_image_name2=OralList[1].split('fdfd')[1]
+	Oral_height2=OralList[1].split('fdfd')[2]
+	Oral_width2=OralList[1].split('fdfd')[3]
+	
+		
+	var image = document.getElementById('Oral_image_div1');
+    image.src = SkinCare_image_path1;	
+	var image1 = document.getElementById('Oral_image_div2');
+    image1.src = SkinCare_image_path2;	
+	
+	
+	$("#Oral_image_div_hidden1").val(Oral_image_path1); 
+	$("#Oral_image_name_hidden1").val(Oral_image_name1);
+	$("#Oral_height1").val(Oral_height1);
+	$("#Oral_width1").val(Oral_width1);
+	
+	$("#Oral_image_div_hidden2").val(Oral_image_path2); 
+	$("#Oral_image_name_hidden2").val(Oral_image_name2);
+	$("#Oral_height2").val(Oral_height2);
+	$("#Oral_width2").val(Oral_width2);
 	
 	
 	
@@ -1643,7 +1662,7 @@ function Cat_page_set() {
 
 	//Foods	==============================================================
 	
-	//Foods=Foods.split('rdrd')
+	
 	
 	Foods_image_path1=FoodsList[0].split('fdfd')[0]
 	Foods_image_name1=FoodsList[0].split('fdfd')[1]
@@ -1657,7 +1676,7 @@ function Cat_page_set() {
 	
 	var image = document.getElementById('Foods_image_div1');
     image.src = Foods_image_path1;	
-	var image1 = document.getElementById('Foods_image_div1');
+	var image1 = document.getElementById('Foods_image_div2');
     image1.src = Foods_image_path2;	
 	
 	$("#Foods_image_div_hidden1").val(Foods_image_path1); 
