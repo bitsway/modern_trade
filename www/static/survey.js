@@ -370,7 +370,7 @@ function shop_ready_data() {
 	shop_page_set();
 }
 function shop_page_set() { 
-	alert ('Shop')
+	//alert ('Shop')
 	if (localStorage.shop_data_ready.length > 10){
 		var shop_data =  localStorage.shop_data_ready.replace("rdrd","");
 		var shop_array =  shop_data.split('fdfd');
@@ -2235,7 +2235,7 @@ function fdisplay_ready_data() {
 }
 
 function fdisplay_page_set() { 
-alert ('fdisplay_page_set')
+//alert ('fdisplay_page_set')
 if (localStorage.fdisplay_data_ready.length > 10){
 	var fdisplay_array =  localStorage.fdisplay_data_ready.split('headend');
 	var fdisplay_head=fdisplay_array[0].replace("headstart","");
@@ -2243,7 +2243,7 @@ if (localStorage.fdisplay_data_ready.length > 10){
 	
 	
 	var fdisplay_head_array =  fdisplay_head.split('rdrd');
-	
+	alert (localStorage.fdisplaySlabTotal)
 	for (var i=0; i < localStorage.fdisplaySlabTotal-1; i++){
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
 		
@@ -2252,9 +2252,9 @@ if (localStorage.fdisplay_data_ready.length > 10){
 		var fdisplayImg=head_s_array[2];
 		var fdisplayImg_path=head_s_array[3];
 		
-		var fdisplayImg_before=head_s_array[4];
+		//var fdisplayImg_before=head_s_array[4];
 		
-		var fdisplayImg_path_before=head_s_array[5].replace("rdrd","");
+		//var fdisplayImg_path_before=head_s_array[5].replace("rdrd","");
 		
 		
 		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path);
@@ -2268,7 +2268,7 @@ if (localStorage.fdisplay_data_ready.length > 10){
 		
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
     	image.src = fdisplayImg_path;
-		
+		alert (i.toString())
 		//var image_before = document.getElementById('fdSL_image_div_'+i.toString()+"_before");
     	//image_before.src = fdisplayImg_path_before;
 		
