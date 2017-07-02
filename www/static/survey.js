@@ -2122,7 +2122,7 @@ function npd_ready_data() {
 
 function sf_page_set() { 
 	
-	var sf_data =  localStorage.sf_data_ready.replace("rdrd","");
+	var sf_data =  localStorage.sf_data.replace("rdrd","");
 	
 	var sf_array =  sf_data[0].split('fdfd');
 	
@@ -2250,8 +2250,7 @@ if (localStorage.fdisplay_data.length > 10){
 		
 		$("#fdSL_image_div_hidden_"+i.toString()).val("test"); 
 		$("#fdSL_image_name_hidden_"+i.toString()).val("test"); 
-		alert (hidden_name)
-		alert (fdisplayImg)
+		
 		
 		
 		
@@ -2446,7 +2445,7 @@ function sf_ready_data() {
 	}
 }
 function place_page_set() { 
-	var place_data =  localStorage.place_data_ready.replace("rdrd","");
+	var place_data =  localStorage.place_data.replace("rdrd","");
 	
 	var place_array1 =  place_data[0].split('fdfd');
 	var place_array2 =  place_data[1].split('fdfd');
