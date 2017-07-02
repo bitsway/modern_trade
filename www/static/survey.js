@@ -2122,7 +2122,7 @@ function npd_ready_data() {
 
 function sf_page_set() { 
 	
-	var sf_data =  localStorage.sf_data.replace("rdrd","");
+	var sf_data =  localStorage.sf_data.split("rdrd");
 	
 	var sf_array =  sf_data[0].split('fdfd');
 	
@@ -2445,19 +2445,16 @@ function sf_ready_data() {
 	}
 }
 function place_page_set() { 
-	alert (localStorage.place_data)
+	
 	var place_data =  localStorage.place_data.split('rdrd');
 	
 	place_array1 =  place_data[0].split('fdfd');
 	place_array2 =  place_data[1].split('fdfd');
 	place_array3 =  place_data[2].split('fdfd');
-	alert (place_data[0])
-	alert (place_data[1])
-	alert (place_data[2])
+	
 	var image_name1 = place_array1[0];
 	var place_image_path1 = place_array1[1];
-	alert (image_name1)
-	alert (place_image_path1)
+	
 	
 	var image_name2 = place_array2[0];
 	var place_image_path2 = place_array2[1];
