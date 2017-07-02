@@ -2237,14 +2237,11 @@ function fdisplay_ready_data() {
 function fdisplay_page_set() { 
 //alert (localStorage.fdisplay_data.length)
 if (localStorage.fdisplay_data.length > 10){
-	//var fdisplay_array =  localStorage.fdisplay_data.split('headend');
-//	var fdisplay_head=fdisplay_array[0].replace("headstart","");
-//	var fdisplay_detail=fdisplay_array[1];
+
 	
 	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
-	//var fdisplaySlabTotal = 
-	//alert (localStorage.fdisplaySlabTotal)
+
 	for (var i=0; i < localStorage.fdisplaySlabTotal-1; i++){
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
 
@@ -2256,6 +2253,9 @@ if (localStorage.fdisplay_data.length > 10){
 		
 
 		alert (fdisplayImg_path)
+		alert ('fdSL_image_div_'+i.toString())
+	
+	
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
     	image.src = fdisplayImg_path;
 		
@@ -2266,30 +2266,7 @@ if (localStorage.fdisplay_data.length > 10){
 		
 		
 		
-		
-		//var fdisplay_detail_array =  fdisplay_detail.split('detaildetail');
-//		
-//		var fdisplay_detail_n=fdisplay_detail_array[i]
-//		
-//		var fdisplay_detail_s_array_1 =  fdisplay_detail_n.split('rdrd');
-		//var fdTotal_detail=fdisplay_detail_s_array_1.length
-//		
-//				for (var d=0; d < fdTotal_detail-1; d++){
-//					
-//					var fdisplay_detail_s_array =  fdisplay_detail_s_array_1[d].split('fdfd');
-//					
-//					var ItemQtyfdisplay= fdisplay_detail_s_array[1];
-//					var ItemFaceupfdisplay= fdisplay_detail_s_array[2];
-//					var ItemVisiblefdisplay= fdisplay_detail_s_array[3];
-//					
-//					$("#ItemQtyfdisplay_"+i.toString()+"_"+d.toString()).val(ItemQtyfdisplay);
-//					$("#ItemFaceupfdisplay_"+i.toString()+"_"+d.toString()).val(ItemFaceupfdisplay);
-//					if (ItemVisiblefdisplay=='YES'){
-//						$("#ItemVisiblefdisplay_"+i.toString()+"_"+d.toString()).attr('checked',true);
-//					} //endif
-//
-//			
-//				}//end for
+
 			
 	
 		
