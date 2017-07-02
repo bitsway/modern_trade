@@ -2243,15 +2243,15 @@ if (localStorage.fdisplay_data.length > 10){
 	
 	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
-	var fdisplaySlabTotal = 
-	alert (localStorage.fdisplaySlabTotal)
+	//var fdisplaySlabTotal = 
+	//alert (localStorage.fdisplaySlabTotal)
 	for (var i=0; i < localStorage.fdisplaySlabTotal-1; i++){
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
 		
-		var slabfdisplay =head_s_array[0];
-		var fdisplayTotal=head_s_array[1];
-		var fdisplayImg=head_s_array[2];
-		var fdisplayImg_path=head_s_array[3];
+		//var slabfdisplay =head_s_array[0];
+		//var fdisplayTotal=head_s_array[1];
+		var fdisplayImg=head_s_array[1];
+		var fdisplayImg_path=head_s_array[0];
 		
 		//var fdisplayImg_before=head_s_array[4];
 		
