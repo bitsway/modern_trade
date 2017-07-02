@@ -2145,7 +2145,8 @@ function sf_page_set() {
 	//getlocationand_askhelp();
 }
 function npd_page_set() { 
-	var npd_array =  localStorage.npd_data_ready.split('rdrd');
+if (localStorage.npd_data.length > 10){
+	var npd_array =  localStorage.npd_data.split('rdrd');
 	 for (var i=0; i < npd_array.length-1; i++){
 		var npd_single_array = npd_array[i].split('fdfd');	
 		//var itemQty=npd_single_array[1];
@@ -2167,6 +2168,7 @@ function npd_page_set() {
 		$('#npd').find('input, textarea, button, select').attr('disabled','disabled');
 	    $('#npd').addClass('disabledAnchor');	
 	}
+ }
 	 
 }
 
@@ -2320,8 +2322,8 @@ function qpds_ready_data() {
 
 function qpds_page_set() { 
 
-if (localStorage.qpds_data_ready.length > 10){
-	var qpds_array =  localStorage.qpds_data_ready.split('headend');
+if (localStorage.qpds_data.length > 10){
+	var qpds_array =  localStorage.qpds_data.split('headend');
 	var qpds_head=qpds_array[0].replace("headstart","");
 	var qpds_detail=qpds_array[1];
 	
