@@ -2446,11 +2446,11 @@ function sf_ready_data() {
 }
 function place_page_set() { 
 	alert (localStorage.place_data)
-	var place_data =  localStorage.place_data.replace("rdrd","");
+	var place_data =  localStorage.place_data.split('rdrd');
 	
-	var place_array1 =  place_data[0].split('fdfd');
-	var place_array2 =  place_data[1].split('fdfd');
-	var place_array3 =  place_data[2].split('fdfd');
+	place_array1 =  place_data[0].split('fdfd');
+	place_array2 =  place_data[1].split('fdfd');
+	place_array3 =  place_data[2].split('fdfd');
 	alert (place_data[0])
 	alert (place_data[1])
 	alert (place_data[2])
