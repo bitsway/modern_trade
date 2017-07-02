@@ -2145,6 +2145,7 @@ function sf_page_set() {
 	//getlocationand_askhelp();
 }
 function npd_page_set() { 
+alert (localStorage.npd_data)
 if (localStorage.npd_data.length > 10){
 	var npd_array =  localStorage.npd_data.split('rdrd');
 	 for (var i=0; i < npd_array.length-1; i++){
@@ -2153,7 +2154,9 @@ if (localStorage.npd_data.length > 10){
 		var npd_image_div_path=npd_single_array[3];
 		var npd_image_name_hidden=npd_single_array[4];
 		
-		
+		alert (npd_array[i])
+		alert (npd_single_array[3])
+		alert (npd_single_array[4])
 		
 		$("#npd_image_div_hidden_"+i.toString()).val(npd_image_div_path); 
 		$("#npd_image_name_hidden_"+i.toString()).val(npd_image_name_hidden); 
