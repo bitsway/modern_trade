@@ -2235,7 +2235,7 @@ function fdisplay_ready_data() {
 }
 
 function fdisplay_page_set() { 
-//alert ('fdisplay_page_set')
+alert (localStorage.fdisplay_data_ready)
 if (localStorage.fdisplay_data_ready.length > 10){
 	var fdisplay_array =  localStorage.fdisplay_data_ready.split('headend');
 	var fdisplay_head=fdisplay_array[0].replace("headstart","");
