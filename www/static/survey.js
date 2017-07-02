@@ -1842,9 +1842,9 @@ function syncOutlet() {
 					var fdSL_image_name_hidden='fdSL_image_name_hidden_'+slab_text
 					
 					var fdSL_image='fdSL_image_'+slab_text
-					var fdSL_image_div='fdSL_image_div_'+slab_text
+					//var fdSL_image_div='fdSL_image_div_'+slab_text
 					var fdSLfdisplay='fdSLfdisplay_'+slab_text
-					alert (fdSL_image_div)
+					//alert (fdSL_image_div)
 									
 					fdisplayStringShow=fdisplayStringShow+'<div id="fddiv_'+slab.toString()+'">'
 					fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table>';
@@ -1870,8 +1870,8 @@ function syncOutlet() {
 					'<input type="hidden" name="'+ fdSLfdisplay +'" id="'+ fdSLfdisplay +'" value="'+fdSLfdisplay+'" min="0">  '+
 					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+ 
 					'<img id="'+fdSL_image_div+'" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
-					'<input type="hidden" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
-					'<input type="hidden" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
+					'<input type="text" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
+					'<input type="text" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ fdSL_total_hidden +'" id="'+ fdSL_total_hidden +'" value="'+fdisplaySingleTotal+'" >'
 								
 					
@@ -2252,14 +2252,14 @@ if (localStorage.fdisplay_data.length > 10){
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg);
 		
 
+		
+	
+		
+		var image = document.getElementById('fdSL_image_div_'+i.toString());
+		image.src = fdisplayImg_path;
+		
 		alert (fdisplayImg_path)
 		alert ('fdSL_image_div_'+i.toString())
-	
-	
-		var image = document.getElementById('fdSL_image_div_'+i.toString());
-    	image.src = fdisplayImg_path;
-		
-		
 		
 		//==============
 		
