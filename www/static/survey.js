@@ -1795,8 +1795,8 @@ function syncOutlet() {
 				npdStringShow=npdStringShow+'<table width="100%" border="0"><tr>'+
 						'<td> <a data-role="button" href="#" onClick="get_pic_npd('+i_text+')" >Take Picture </a></td></tr></table>'+ 
 						'<img id="'+npd_image_div+'" height="100px" width="100px"  src="" alt="NPDPic" />'+
-						npd_image_div_hidden+'<input type="text" name="'+ npd_image_div_hidden +'" id="'+ npd_image_div_hidden +'" value="" >'+
-						npd_image_name_hidden+'<input type="text" name="'+ npd_image_name_hidden +'" id="'+ npd_image_name_hidden +'" value="" ><br>------------------------------------------------------------------'
+						'<input type="hidden" name="'+ npd_image_div_hidden +'" id="'+ npd_image_div_hidden +'" value="" >'+
+						'<input type="hidden" name="'+ npd_image_name_hidden +'" id="'+ npd_image_name_hidden +'" value="" ><br>------------------------------------------------------------------'
 						
 
 				
@@ -1870,8 +1870,8 @@ function syncOutlet() {
 					'<input type="hidden" name="'+ fdSLfdisplay +'" id="'+ fdSLfdisplay +'" value="'+fdSLfdisplay+'" min="0">  '+
 					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+ 
 					'<img id="'+fdSL_image_div+'" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
-					fdSL_image_div_hidden+'<input type="text" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
-					fdSL_image_name_hidden+'<input type="text" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
+					fdSL_image_div_hidden+'<input type="hidden" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
+					fdSL_image_name_hidden+'<input type="hidden" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ fdSL_total_hidden +'" id="'+ fdSL_total_hidden +'" value="'+fdisplaySingleTotal+'" >'
 								
 					
@@ -2145,7 +2145,7 @@ function sf_page_set() {
 	//getlocationand_askhelp();
 }
 function npd_page_set() { 
-alert (localStorage.npd_data)
+//alert (localStorage.npd_data)
 if (localStorage.npd_data.length > 10){
 	var npd_array =  localStorage.npd_data.split('rdrd');
 	 for (var i=0; i < npd_array.length-1; i++){
@@ -2154,9 +2154,9 @@ if (localStorage.npd_data.length > 10){
 		var npd_image_div_path=npd_single_array[0];
 		var npd_image_name_hidden=npd_single_array[1];
 		
-		alert (npd_array[i])
-		alert (npd_single_array[0])
-		alert (npd_single_array[1])
+		//alert (npd_array[i])
+		//alert (npd_single_array[0])
+		//alert (npd_single_array[1])
 		
 		$("#npd_image_div_hidden_"+i.toString()).val(npd_image_div_path); 
 		$("#npd_image_name_hidden_"+i.toString()).val(npd_image_name_hidden); 
