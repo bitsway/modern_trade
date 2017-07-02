@@ -2151,8 +2151,8 @@ if (localStorage.npd_data.length > 10){
 	 for (var i=0; i < npd_array.length-1; i++){
 		var npd_single_array = npd_array[i].split('fdfd');	
 		//var itemQty=npd_single_array[1];
-		var npd_image_div_path=npd_single_array[3];
-		var npd_image_name_hidden=npd_single_array[4];
+		var npd_image_div_path=npd_single_array[0];
+		var npd_image_name_hidden=npd_single_array[1];
 		
 		alert (npd_array[i])
 		alert (npd_single_array[3])
