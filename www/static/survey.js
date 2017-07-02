@@ -2252,7 +2252,10 @@ if (localStorage.fdisplay_data.length > 10){
 		//var fdisplayTotal=head_s_array[1];
 		var fdisplayImg=head_s_array[1];
 		var fdisplayImg_path=head_s_array[0];
-		
+		alert ('fdSL_image_div_'+i.toString())
+		alert (fdisplay_head_array[i])
+		alert (fdisplayImg)
+		alert (fdisplayImg_path)
 		//var fdisplayImg_before=head_s_array[4];
 		
 		//var fdisplayImg_path_before=head_s_array[5].replace("rdrd","");
