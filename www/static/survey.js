@@ -2247,11 +2247,12 @@ if (localStorage.fdisplay_data.length > 10){
 
 		var fdisplayImg=head_s_array[1];
 		var fdisplayImg_path=head_s_array[0];
-		alert ('fdSL_image_div_hidden_'+i.toString())
-		alert ('fdSL_image_name_hidden_'+i.toString())
 		
-		$("#fdSL_image_div_hidden_"+i.toString()).val('kkkk'); 
-		$("#fdSL_image_name_hidden_"+i.toString()).val('ttttt');
+		var hidden_name="fdSL_image_name_hidden_"+i.toString();
+		$("#"+hidden_name).val(fdisplayImg);
+		
+		//$("#fdSL_image_div_hidden_"+i.toString()).val('kkkk'); 
+		//$("#fdSL_image_name_hidden_"+i.toString()).val('ttttt');
 		
 		
 		
