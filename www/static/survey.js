@@ -2445,11 +2445,12 @@ function sf_ready_data() {
 	}
 }
 function place_page_set() { 
+	alert (localStorage.place_data)
 	var place_data =  localStorage.place_data.replace("rdrd","");
 	
 	var place_array1 =  place_data[0].split('fdfd');
 	var place_array2 =  place_data[1].split('fdfd');
-	var place_array3 =  place_data[1].split('fdfd');
+	var place_array3 =  place_data[2].split('fdfd');
 	
 	var image_name1 = place_array1[0];
 	var place_image_path1 = place_array1[1];
@@ -2479,6 +2480,9 @@ function place_page_set() {
 	var image3 = document.getElementById('place_image_div3');
 	image3.src = place_image_path3;
 	
+	alert (place_image_path1)
+	alert (place_image_path2)
+	alert (place_image_path3)
 	
 	if (localStorage.place_next_flag==1){
 	//	$('#place_show').find('input, textarea, button, select').attr('disabled','disabled');
