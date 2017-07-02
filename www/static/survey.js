@@ -2235,13 +2235,13 @@ function fdisplay_ready_data() {
 }
 
 function fdisplay_page_set() { 
-alert (localStorage.fdisplay_data.length)
+//alert (localStorage.fdisplay_data.length)
 if (localStorage.fdisplay_data.length > 10){
 	//var fdisplay_array =  localStorage.fdisplay_data.split('headend');
 //	var fdisplay_head=fdisplay_array[0].replace("headstart","");
 //	var fdisplay_detail=fdisplay_array[1];
 	
-	
+	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
 	var fdisplaySlabTotal = 
 	alert (localStorage.fdisplaySlabTotal)
