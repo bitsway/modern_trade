@@ -2155,8 +2155,8 @@ if (localStorage.npd_data.length > 10){
 		var npd_image_name_hidden=npd_single_array[1];
 		
 		alert (npd_array[i])
-		alert (npd_single_array[3])
-		alert (npd_single_array[4])
+		alert (npd_single_array[0])
+		alert (npd_single_array[1])
 		
 		$("#npd_image_div_hidden_"+i.toString()).val(npd_image_div_path); 
 		$("#npd_image_name_hidden_"+i.toString()).val(npd_image_name_hidden); 
