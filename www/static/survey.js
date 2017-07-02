@@ -1870,8 +1870,8 @@ function syncOutlet() {
 					'<input type="hidden" name="'+ fdSLfdisplay +'" id="'+ fdSLfdisplay +'" value="'+fdSLfdisplay+'" min="0">  '+
 					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+ 
 					'<img id="'+fdSL_image_div+'" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
-					'<input type="text" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
-					'<input type="text" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
+					fdSL_image_div_hidden+'<input type="text" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
+					fdSL_image_name_hidden+'<input type="text" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ fdSL_total_hidden +'" id="'+ fdSL_total_hidden +'" value="'+fdisplaySingleTotal+'" >'
 								
 					
@@ -2250,6 +2250,10 @@ if (localStorage.fdisplay_data.length > 10){
 		
 		var hidden_name="fdSL_image_name_hidden_"+i.toString();
 		$("#"+hidden_name).val(fdisplayImg);
+		alert (hidden_name)
+		alert (fdisplayImg)
+		
+		
 		
 		//$("#fdSL_image_div_hidden_"+i.toString()).val('kkkk'); 
 		//$("#fdSL_image_name_hidden_"+i.toString()).val('ttttt');
