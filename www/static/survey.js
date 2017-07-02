@@ -1844,7 +1844,7 @@ function syncOutlet() {
 					var fdSL_image='fdSL_image_'+slab_text
 					var fdSL_image_div='fdSL_image_div_'+slab_text
 					var fdSLfdisplay='fdSLfdisplay_'+slab_text
-					
+					alert (fdSL_image_div)
 									
 					fdisplayStringShow=fdisplayStringShow+'<div id="fddiv_'+slab.toString()+'">'
 					fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table>';
@@ -2247,34 +2247,18 @@ if (localStorage.fdisplay_data.length > 10){
 	//alert (localStorage.fdisplaySlabTotal)
 	for (var i=0; i < localStorage.fdisplaySlabTotal-1; i++){
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
-		
-		//var slabfdisplay =head_s_array[0];
-		//var fdisplayTotal=head_s_array[1];
+
 		var fdisplayImg=head_s_array[1];
 		var fdisplayImg_path=head_s_array[0];
-		alert ('fdSL_image_div_'+i.toString())
-		alert (fdisplay_head_array[i])
-		alert (fdisplayImg)
-		alert (fdisplayImg_path)
-		//var fdisplayImg_before=head_s_array[4];
-		
-		//var fdisplayImg_path_before=head_s_array[5].replace("rdrd","");
-		
-		
+
 		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path);
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg);
 		
-		
-		//$("#fdSL_image_div_hidden_"+i.toString()+"_before").val(fdisplayImg_path_before); 
-		//$("#fdSL_image_name_hidden_"+i.toString()+"_before").val(fdisplayImg_before);
-			
-		
-		
+
+		alert (fdisplayImg_path)
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
     	image.src = fdisplayImg_path;
-		alert (i.toString())
-		//var image_before = document.getElementById('fdSL_image_div_'+i.toString()+"_before");
-    	//image_before.src = fdisplayImg_path_before;
+		
 		
 		
 		//==============
