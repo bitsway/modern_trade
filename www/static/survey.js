@@ -2250,8 +2250,8 @@ if (localStorage.fdisplay_data.length > 10){
 		alert ('fdSL_image_div_hidden_'+i.toString())
 		alert ('fdSL_image_name_hidden_'+i.toString())
 		
-		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path); 
-		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg);
+		$("#fdSL_image_div_hidden_"+i.toString()).val('kkkk'); 
+		$("#fdSL_image_name_hidden_"+i.toString()).val('ttttt');
 		
 		
 		
@@ -2262,8 +2262,8 @@ if (localStorage.fdisplay_data.length > 10){
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
 		image.src = fdisplayImg_path;
 		
-		alert (fdisplayImg_path)
-		alert ('fdSL_image_div_'+i.toString())
+		//alert (fdisplayImg_path)
+		//alert ('fdSL_image_div_'+i.toString())
 		
 		//==============
 		
