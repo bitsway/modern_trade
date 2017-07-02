@@ -2128,7 +2128,7 @@ function sf_page_set() {
 	
 	
 	var image_name = sf_array[0];
-	var sf_image_path1 = sf_array[1];
+	var sf_image_path = sf_array[1];
 	
 	$("#sf_image_name_hidden").val(image_name);
 	$("#sf_image_div_hidden").val(sf_image_path);
