@@ -4000,71 +4000,71 @@ function menupage(){
 
 
 function munu_page_check(){
-	var sync_date_get=get_date();
-	//var sync_date=sync_date_get.split(' ')[0];
-	var sync_y=sync_date_get.split('-')[0];
-	var sync_m=sync_date_get.split('-')[1];
-	if (sync_m.length==1){sync_m='0'+sync_m}
-	var sync_d=sync_date_get.split('-')[2].split(' ')[0];
-	if (sync_d.length==1){sync_d='0'+sync_d}
-	var sync_date=sync_y +'-'+ sync_m +'-'+sync_d;
-	//localStorage.sync_date="2015-1204"
-	
-	
-	if ((localStorage.synced=='YES') & (localStorage.sync_date!=sync_date)){
-					
-					cancel_outlet();
-					
-					localStorage.show_cancel=0;
-								
-					localStorage.m_new_string="";
-					localStorage.m_new="";
-					localStorage.selectedOutlet="";
-					localStorage.outletExStringShow="";
-					localStorage.outletException="";
-					localStorage.outletChanne="";
-					localStorage.outletNameID="";
-					localStorage.mhskusTotal="";
-					
-					localStorage.npdTotal="";
-					localStorage.fdisplaySlabTotal="";
-					localStorage.fdisplayTotal="";
-					localStorage.qpdsSlabTotal="";
-					
-					localStorage.qpdsTotal="";
-					localStorage.giftTotal="";
-					localStorage.marchadizingTotal="";
-					localStorage.mhskus_data_ready="";
-					localStorage.npd_data_ready="";
-					localStorage.fdisplay_data_ready="";
-					localStorage.qpds_data_ready="";
-					localStorage.gift_data_ready="";
-					localStorage.mar_data_ready="";
-					
-					//localStorage.sync_date=sync_date;
-					//localStorage.synced=='YES';
-					
-					
-					//distributon
-					localStorage.mar_distrib_data=""
-					localStorage.merchandisingDistribStr=""
-					localStorage.mar_distrib_stock=""
-					
-					
-					
-					//check_route();
-					var url = "#login";
-					$.mobile.navigate(url);
-					
-				//	location.reload()
-				}
-		else{
-			check_route();
+	//var sync_date_get=get_date();
+//	//var sync_date=sync_date_get.split(' ')[0];
+//	var sync_y=sync_date_get.split('-')[0];
+//	var sync_m=sync_date_get.split('-')[1];
+//	if (sync_m.length==1){sync_m='0'+sync_m}
+//	var sync_d=sync_date_get.split('-')[2].split(' ')[0];
+//	if (sync_d.length==1){sync_d='0'+sync_d}
+//	var sync_date=sync_y +'-'+ sync_m +'-'+sync_d;
+//	//localStorage.sync_date="2015-1204"
+//	
+//	
+//	if ((localStorage.synced=='YES') & (localStorage.sync_date!=sync_date)){
+//					
+//					cancel_outlet();
+//					
+//					localStorage.show_cancel=0;
+//								
+//					localStorage.m_new_string="";
+//					localStorage.m_new="";
+//					localStorage.selectedOutlet="";
+//					localStorage.outletExStringShow="";
+//					localStorage.outletException="";
+//					localStorage.outletChanne="";
+//					localStorage.outletNameID="";
+//					localStorage.mhskusTotal="";
+//					
+//					localStorage.npdTotal="";
+//					localStorage.fdisplaySlabTotal="";
+//					localStorage.fdisplayTotal="";
+//					localStorage.qpdsSlabTotal="";
+//					
+//					localStorage.qpdsTotal="";
+//					localStorage.giftTotal="";
+//					localStorage.marchadizingTotal="";
+//					localStorage.mhskus_data_ready="";
+//					localStorage.npd_data_ready="";
+//					localStorage.fdisplay_data_ready="";
+//					localStorage.qpds_data_ready="";
+//					localStorage.gift_data_ready="";
+//					localStorage.mar_data_ready="";
+//					
+//					//localStorage.sync_date=sync_date;
+//					//localStorage.synced=='YES';
+//					
+//					
+//					//distributon
+//					localStorage.mar_distrib_data=""
+//					localStorage.merchandisingDistribStr=""
+//					localStorage.mar_distrib_stock=""
+//					
+//					
+//					
+//					//check_route();
+//					var url = "#login";
+//					$.mobile.navigate(url);
+//					
+//				//	location.reload()
+//				}
+//		else{
+//			check_route();
 			
 			
 			var url = "#menuPage";
 			$.mobile.navigate(url);
-		}
+		//}
 }
 
 
