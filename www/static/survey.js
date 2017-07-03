@@ -1728,7 +1728,7 @@ function syncOutlet() {
 			if (result_string.length > 50){
 			var npdArray = result_string.split('</npdList>');									
 			npdList = npdArray[0].split("<npdList>")[1];
-			alert (npdList)
+			//alert (npdList)
 			
 			fdisplay = npdArray[1];
 			var fdisplayArray = fdisplay.split('</fdisplayList>');									
@@ -1744,7 +1744,7 @@ function syncOutlet() {
 			
 			//==========Create NPD list
 			
-			var npdSingleArray = qpdsList.split('rdrd');	
+			var npdSingleArray = npdList.split('rdrd');	
 			var npdSingleTotal = npdSingleArray.length;
 			
 			
