@@ -1731,7 +1731,7 @@ function syncOutlet() {
 			//alert (npdList)
 			
 			fdisplay = npdArray[1];
-			var fdisplayArray = result_string.split('</fdisplayList>');									
+			var fdisplayArray = fdisplay.split('</fdisplayList>');									
 			fdisplayList = fdisplayArray[0].replace("<fdisplayList>","");
 			//alert (fdisplayList)
 			
