@@ -268,6 +268,8 @@ function cancel_outlet_next_next(){
 	$("#outletInfoCategory").empty();
 	$("#outletInfoCategory").append(localStorage.outletNameID).trigger('create');
 	syncOutlet();
+	$("#sf_outlet_nameID1").html(localStorage.outletNameID);
+	$("#place_outlet_nameID1").html(localStorage.outletNameID);
 	
 	//var url = "#categoryPage";
 	var url = "#sFPage";
@@ -514,6 +516,20 @@ function cancel_outlet(){
 	localStorage.qpds_data_ready="";
 	localStorage.gift_data_ready="";
 	localStorage.mar_data_ready="";
+	
+	
+	localStorage.CategoryStr="";
+	localStorage.npd_data="";
+	localStorage.fdisplay_data="";
+	localStorage.qpds_data="";
+	localStorage.place_data="";
+	localStorage.sf_data=""; 
+	
+	
+	
+	
+	
+	
 	
 	localStorage.shop_data_ready="";
 	localStorage.place_data_ready="";
@@ -1781,7 +1797,7 @@ function syncOutlet() {
 				
 				
 				
-				npdStringShow=npdStringShow+apipath_image+'static/uni_image/npd/'+npd_image+'<img src="'+apipath_image+'static/uni_image/npd/'+npd_image+'" alt="NPD" />';
+				npdStringShow=npdStringShow+'<img src="'+apipath_image+'static/uni_image/npd/'+npd_image+'" alt="NPD" />';
 				
 				//npdStringShow=npdStringShow+'<tr ><td>&nbsp;</td><td>'+itemName+
 //				'<input type="hidden" name="'+ Itemnpd +'" id="'+ Itemnpd +'" value="'+itemID+'" min="0">'+
@@ -2087,7 +2103,7 @@ function mhskus_page_set() {
 
 function npd_ready_data() { 
 	//===============NPD data==================
-	var errorFlag=true
+	var errorFlag=false
 	var npd_data=""
 //	
 //	var error_flag_qty_npd=0;
@@ -2101,9 +2117,9 @@ function npd_ready_data() {
 		
 		
 		npd_data=npd_data+npd_image_div_path+'fdfd'+npd_image_name_hidden+'rdrd';
-		errorFlag=true
-		if (npd_image_div_path!=''){
-			errorFlag=false
+		//errorFlag=true
+		if (npd_image_div_path==''){
+			errorFlag=true
 		}
 		
 	}
@@ -2212,7 +2228,7 @@ function fdisplay_before_page_next() {
 //====================fdisply before page end=======================
 function fdisplay_ready_data() { 
 	//===============fixeddisplay data==================
-	var errorFlag=true
+	var errorFlag=false
 	var fdisplay_data=""
 	
 	for (var i=0; i < localStorage.fdisplaySlabTotal-1; i++){
@@ -2223,9 +2239,9 @@ function fdisplay_ready_data() {
 		
 		var fdSLfdisplay_image_path1=$("#fdSL_image_div_hidden_"+i.toString()+"_1").val(); 
 		var fdSLfdisplay_image_name1=$("#fdSL_image_name_hidden_"+i.toString()+"_1").val(); 
-		errorFlag=true
-		if (fdSLfdisplay_image_path!=''){
-			errorFlag=false
+		//errorFlag=true
+		if (fdSLfdisplay_image_path==''){
+			errorFlag=true
 		}
 		
 		fdisplay_data=fdisplay_data+fdSLfdisplay_image_path+'fdfd'+fdSLfdisplay_image_name+'fdfd'+fdSLfdisplay_image_path1+'fdfd'+fdSLfdisplay_image_name1+'rdrd'
@@ -2301,7 +2317,7 @@ if (localStorage.before_flag==1){
 
 function qpds_ready_data() { 
 	//===============QPDS data==================
-	var errorFlag=true
+	var errorFlag=false
 	var qpds_data=""
 	
 	for (var i=0; i < localStorage.qpdsSlabTotal-1; i++){
@@ -2310,9 +2326,9 @@ function qpds_ready_data() {
 		var qpdsSlab=$("#qpdsSL_"+i.toString()).val(); 
 		
 		qpds_data=qpds_data+qpdsSL_image_path+'fdfd'+qpdsSL_image_name+'fdfd'+qpdsSlab+'rdrd'
-		errorFlag=true
-		if (qpdsSL_image_path!=''){
-			errorFlag=false
+		//errorFlag=true
+		if (qpdsSL_image_path==''){
+			errorFlag=true
 		}
 		}
 		localStorage.qpds_data=qpds_data
