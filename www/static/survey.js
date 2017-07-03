@@ -1781,7 +1781,7 @@ function syncOutlet() {
 				
 				
 				
-				npdStringShow=npdStringShow+'<img src="'+apipath_image+'static/uni_image/npd/'+npd_image+'" alt="NPD" />';
+				npdStringShow=npdStringShow+apipath_image+'static/uni_image/npd/'+npd_image+'<img src="'+apipath_image+'static/uni_image/npd/'+npd_image+'" alt="NPD" />';
 				
 				//npdStringShow=npdStringShow+'<tr ><td>&nbsp;</td><td>'+itemName+
 //				'<input type="hidden" name="'+ Itemnpd +'" id="'+ Itemnpd +'" value="'+itemID+'" min="0">'+
@@ -1809,7 +1809,7 @@ function syncOutlet() {
 			$("#npd").html(localStorage.npdStringShow);
 			
 	//=====================Create Fixed Display list
-			alert (fdisplayList)
+			//alert (fdisplayList)
 			var fdisplaySlabArray = fdisplayList.split('</slab>');
 			var fdisplaySlabTotal = fdisplaySlabArray.length;
 			
