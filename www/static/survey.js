@@ -1848,8 +1848,8 @@ function syncOutlet() {
 					//alert (fdSL_image_div)
 									
 					fdisplayStringShow=fdisplayStringShow+'<div id="fddiv_'+slab.toString()+'">'
-					fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table>';
-					fdisplayStringShow=fdisplayStringShow+'<img height="100px" width="100%"  src="'+apipath_image+'static/uni_images/display/'+fdisplaySlab_image+'" alt="FixedDisplay" />';
+					//fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table>';
+					fdisplayStringShow=fdisplayStringShow+apipath_image+'static/uni_images/display/'+fdisplaySlab_image+'<img height="100px" width="100%"  src="'+apipath_image+'static/uni_images/display/'+fdisplaySlab_image+'" alt="FixedDisplay" />';
 					
 					
 					
