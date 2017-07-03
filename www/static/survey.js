@@ -1809,7 +1809,7 @@ function syncOutlet() {
 			$("#npd").html(localStorage.npdStringShow);
 			
 	//=====================Create Fixed Display list
-			
+			alert (fdisplayList)
 			var fdisplaySlabArray = fdisplayList.split('</slab>');
 			var fdisplaySlabTotal = fdisplaySlabArray.length;
 			
