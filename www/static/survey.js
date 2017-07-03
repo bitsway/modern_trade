@@ -269,7 +269,8 @@ function cancel_outlet_next_next(){
 	$("#outletInfoCategory").append(localStorage.outletNameID).trigger('create');
 	syncOutlet();
 	
-	var url = "#categoryPage";
+	//var url = "#categoryPage";
+	var url = "#sFPage";
 	$.mobile.navigate(url);
 	//location.reload();
 	setDivCat()
@@ -2424,8 +2425,8 @@ function place_ready_data() {
 	}
 	$("#sf_outlet_nameID1").html(localStorage.outletNameID);
 	if (errorFlag==false){
-		//var url = "#submitPage";
-		var url = "#sFPage";
+		var url = "#submitPage";
+		//var url = "#sFPage";
 		$.mobile.navigate(url);
 	}
 }
@@ -2445,7 +2446,9 @@ function sf_ready_data() {
 		errorFlag=false
 	}
 	if (errorFlag==false){
-		var url = "#submitPage";
+		//var url = "#submitPage";
+		var url = "#categoryPage";
+		
 		$.mobile.navigate(url);
 	}
 }
