@@ -1781,7 +1781,7 @@ function syncOutlet() {
 				
 				
 				
-				npdStringShow=npdStringShow+'<img src="'+apipath_image+'static/uni_images/npd/'+npd_image+'" alt="NPD" />';
+				npdStringShow=npdStringShow+'<img src="'+apipath_image+'static/uni_image/npd/'+npd_image+'" alt="NPD" />';
 				
 				//npdStringShow=npdStringShow+'<tr ><td>&nbsp;</td><td>'+itemName+
 //				'<input type="hidden" name="'+ Itemnpd +'" id="'+ Itemnpd +'" value="'+itemID+'" min="0">'+
@@ -1849,7 +1849,7 @@ function syncOutlet() {
 									
 					fdisplayStringShow=fdisplayStringShow+'<div id="fddiv_'+slab.toString()+'">'
 					//fdisplayStringShow=fdisplayStringShow+'</br></br><table width="100%" border="0"> <tr><td style=" font-weight:bold; font-size:28px color:#006A6A; background:#FFECFF">'+fdisplaySlab_name+'</td> </tr></table>';
-					fdisplayStringShow=fdisplayStringShow+apipath_image+'static/uni_images/display/'+fdisplaySlab_image+'<img height="100px" width="100%"  src="'+apipath_image+'static/uni_images/display/'+fdisplaySlab_image+'" alt="FixedDisplay" />';
+					fdisplayStringShow=fdisplayStringShow+apipath_image+'static/uni_image/display/'+fdisplaySlab_image+'<img height="100px" width="100%"  src="'+apipath_image+'static/uni_image/display/'+fdisplaySlab_image+'" alt="FixedDisplay" />';
 					
 					
 					
@@ -1913,7 +1913,7 @@ function syncOutlet() {
 				
 				qpdsStringShow=qpdsStringShow+'<div id="qpdsdiv_'+slab.toString()+'">'
 				
-				qpdsStringShow=qpdsStringShow+'<img height="100px"  src="'+apipath_image+'static/uni_images/scheme/'+qpdsSlab_image+'" alt="QPDS" />';
+				qpdsStringShow=qpdsStringShow+'<img height="100px"  src="'+apipath_image+'static/uni_image/scheme/'+qpdsSlab_image+'" alt="QPDS" />';
 				qpdsStringShow=qpdsStringShow+'<table width="100%" border="0" cellpadding="0" cellspacing="0">'
 				
 				
