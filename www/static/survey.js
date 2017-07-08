@@ -2283,7 +2283,8 @@ if (localStorage.fdisplay_data.length > 10){
 		
 
 		
-	
+		alert (fdisplayImg_path)
+		alert ('fdSL_image_div_'+i.toString())
 		
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
 		image.src = fdisplayImg_path;
