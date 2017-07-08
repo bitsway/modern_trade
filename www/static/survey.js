@@ -2257,22 +2257,22 @@ function fdisplay_ready_data() {
 }
 
 function fdisplay_page_set() { 
-//alert (localStorage.fdisplay_data.length)
+alert (localStorage.fdisplay_data.length)
 if (localStorage.fdisplay_data.length > 10){
 
 	
 	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
-
+	alert ('1')
 	for (var i=0; i < fdisplay_head_array.length-1; i++){		
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
-
+		alert ('2')
 		var fdisplayImg=head_s_array[1];
 		var fdisplayImg_path=head_s_array[0];
-		
-		$("#fdSL_image_div_hidden_"+i.toString()).val("test"); 
-		$("#fdSL_image_name_hidden_"+i.toString()).val("test"); 
-		
+		alert ('2')
+		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path); 
+		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg); 
+		alert ('3')
 		
 		
 		
