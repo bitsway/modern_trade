@@ -2256,10 +2256,12 @@ function fdisplay_ready_data() {
 
 }
 
-function fdisplay_page_set() { 
+function fdisplay_page_set() {
+	 
 alert ('test')
 alert (localStorage.fdisplay_data.length)
 if (localStorage.fdisplay_data.length > 10){
+
 
 	
 	var fdisplay_data=localStorage.fdisplay_data
