@@ -1885,7 +1885,7 @@ function syncOutlet() {
 
 					fdisplayStringShow=fdisplayStringShow+'<table width="100%" border="0"><tr>'+
 					'<input type="hidden" name="'+ fdSLfdisplay +'" id="'+ fdSLfdisplay +'" value="'+fdSLfdisplay+'" min="0">  '+
-					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+ 
+					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+fdSL_image_div+ 
 					'<img id="'+fdSL_image_div+'" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
 					'<input type="hidden" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
@@ -2266,16 +2266,16 @@ if (localStorage.fdisplay_data.length > 10){
 	
 	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
-	alert ('1')
+	
 	for (var i=0; i < fdisplay_head_array.length-1; i++){		
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
-		alert ('2')
+		
 		var fdisplayImg=head_s_array[1];
 		var fdisplayImg_path=head_s_array[0];
-		alert ('2')
+		
 		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path); 
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg); 
-		alert ('3')
+		
 		
 		
 		
