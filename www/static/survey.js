@@ -2336,59 +2336,25 @@ if (localStorage.qpds_data.length > 10){
 	for (var i=0; i < localStorage.qpdsSlabTotal-1; i++){
 		
 		var head_s_array=qpds_head_array[i].split('fdfd');
-		var slabqpds =head_s_array[0];
-		var qpdsTotal=head_s_array[1];
+		//var slabqpds =head_s_array[0];
+		//var qpdsTotal=head_s_array[1];
 		
-		var qpdsImg=head_s_array[2];
-		var qpdsImg_path=head_s_array[3];
+		var qpdsImg=head_s_array[1];
+		var qpdsImg_path=head_s_array[0];
 		
 	
-		
-		//var qpdsImg_before=head_s_array[4];
-		//var qpdsImg_path_before=head_s_array[5].replace("rdrd","");
-		
-		//qpdsImg_path='q343253456rdrd'
+
 		
 		$("#qpdsSL_image_name_hidden_"+i.toString()).val(qpdsImg);
 		$("#qpdsSL_image_div_hidden_"+i.toString()).val(qpdsImg_path);
 		
-		//$("#qpdsSL_image_name_hidden_"+i.toString()+"_before").val(qpdsImg_before);
-		//$("#qpdsSL_image_div_hidden_"+i.toString()+"_before").val(qpdsImg_path_before);
 		
 		
 		var image = document.getElementById('qpdsSL_image_div_'+i.toString());
 		image.src = qpdsImg_path;
 		
 		
-		
-		//if ((qpdsImg.length > 10) & (qpdsImg_path.length > 10)){
-//			$('#qpdsdiv_'+i.toString()).find('input, textarea, button, select').attr('disabled','disabled');
-//		}
-		
-		//var qpds_detail_array =  qpds_detail.split('detaildetail');
-//		var qpds_detail_n =  qpds_detail_array[i];
-//		var qpds_detail_s_array_1=qpds_detail_n.split('rdrd');
-//		var qpdsDTotal=qpds_detail_s_array_1.length
-		//alert ("nn") ;
 
-			
-			//for (var d=0; d < qpdsDTotal-1; d++){
-//				
-//				var qpds_detail_s_array =  qpds_detail_s_array_1[d].split('fdfd');
-//				
-//				var ItemQtyqpds = qpds_detail_s_array[1];
-//				var ItemFaceupqpds = qpds_detail_s_array[2];
-//				var ItemVisibleqpds = qpds_detail_s_array[3];
-//				
-//				
-//				
-//				$("#ItemQtyqpds_"+i.toString()+"_"+d.toString()).val(ItemQtyqpds);
-//				$("#ItemFaceupqpds_"+i.toString()+"_"+d.toString()).val(ItemFaceupqpds);
-//				if (ItemVisibleqpds=='YES'){
-//					$("#ItemVisibleqpds_"+i.toString()+"_"+d.toString()).attr('checked',true);
-//				}
-//
-//			}
 	}
 }// End if
 
