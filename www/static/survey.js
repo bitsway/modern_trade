@@ -2265,7 +2265,7 @@ if (localStorage.fdisplay_data.length > 10){
 	
 	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
-	
+	alert (fdisplay_head_array.length)
 	for (var i=0; i < fdisplay_head_array.length-1; i++){		
 		var head_s_array=fdisplay_head_array[i].split('fdfd');
 		
