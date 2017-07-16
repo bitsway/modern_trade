@@ -2276,8 +2276,7 @@ if (localStorage.fdisplay_data.length > 10){
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg); 
 
 		
-		alert ('fdSL_image_div_'+i.toString())
-		alert (fdisplayImg_path)
+		
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
 		image.src = fdisplayImg_path;
 		
@@ -2285,15 +2284,6 @@ if (localStorage.fdisplay_data.length > 10){
 	}//endfor
 }//end if
 
-
-//if (localStorage.fd_done_flag==1){
-//	$('#fdisplay').find('input, textarea, button, select').attr('disabled','disabled');
-//	$('#fdisplay').addClass('disabledAnchor');
-//}
-//if (localStorage.before_flag==1){
-//	$('#fdisplayStringShowBefore').find('input, textarea, button, select').attr('disabled','disabled');
-//	$('#fdisplayStringShowBefore').addClass('disabledAnchor');
-//}
 }
 
 function qpds_ready_data() { 
@@ -2359,10 +2349,7 @@ if (localStorage.qpds_data.length > 10){
 	}
 }// End if
 
-//if (localStorage.qpds_next_flag==1){
-//	$('#qpds').find('input, textarea, button, select').attr('disabled','disabled');
-//	$('#qpds').addClass('disabledAnchor');	
-//}
+
 
 }
 
