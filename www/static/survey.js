@@ -2416,7 +2416,11 @@ function sf_ready_data() {
 }
 function place_page_set() { 
 	alert (localStorage.place_data)
-	var place_data =  localStorage.place_data.split('rdrd');
+	place_data_get=localStorage.place_data
+	var place_data =  place_data_get.split('rdrd');
+	alert (place_data[0])
+	alert (place_data[1])
+	alert (place_data[2])
 	
 	place_array1 =  place_data[0].split('fdfd');
 	place_array2 =  place_data[1].split('fdfd');
@@ -2432,13 +2436,18 @@ function place_page_set() {
 	var image_name3 = place_array3[0];
 	var place_image_path3 = place_array3[1];
 	
-
+	alert (image_name1)
+	alert (place_image_path1)
 	$("#place_image_name_hidden1").val(image_name1);
 	$("#place_image_div_hidden1").val(place_image_path1);
 	
+	alert (image_name2)
+	alert (place_image_path2)
 	$("#place_image_name_hidden2").val(image_name2);
 	$("#place_image_div_hidden2").val(place_image_path2);
 	
+	alert (image_name3)
+	alert (place_image_path3)
 	$("#place_image_name_hidden3").val(image_name3);
 	$("#place_image_div_hidden3").val(place_image_path3);
 
