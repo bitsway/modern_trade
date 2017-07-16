@@ -2415,7 +2415,7 @@ function sf_ready_data() {
 	}
 }
 function place_page_set() { 
-	
+	alert (localStorage.place_data)
 	var place_data =  localStorage.place_data.split('rdrd');
 	
 	place_array1 =  place_data[0].split('fdfd');
