@@ -2274,12 +2274,12 @@ if (localStorage.fdisplay_data.length > 10){
 		
 		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path); 
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg); 
-
-		
 		
 		var image = document.getElementById('fdSL_image_div_'+i.toString());
 		image.src = fdisplayImg_path;
 		
+		alert ('fdSL_image_div_'+i.toString())
+		alert (fdisplayImg_path)
 		
 	}//endfor
 }//end if
