@@ -2416,12 +2416,10 @@ function sf_ready_data() {
 }
 function place_page_set() { 
 
-	alert (localStorage.place_data)
+	
 	place_data_get=localStorage.place_data
 	var place_data =  place_data_get.split('rdrd');
-	alert (place_data[0])
-	alert (place_data[1])
-	alert (place_data[2])
+	
 	
 	place_array1 =  place_data[0].split('fdfd');
 	place_array2 =  place_data[1].split('fdfd');
