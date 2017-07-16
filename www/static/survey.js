@@ -1885,7 +1885,7 @@ function syncOutlet() {
 
 					fdisplayStringShow=fdisplayStringShow+'<table width="100%" border="0"><tr>'+
 					'<input type="hidden" name="'+ fdSLfdisplay +'" id="'+ fdSLfdisplay +'" value="'+fdSLfdisplay+'" min="0">  '+
-					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+fdSL_image_div+ 
+					'<td> <a data-role="button" href="#" onClick="get_pic_fdisplay('+slab+')" >Take Picture </a></td></tr></table>'+
 					'<img id="'+fdSL_image_div+'" height="100px" width="100px"  src="" alt="FixedDisplay" />'+
 					'<input type="hidden" name="'+ fdSL_image_div_hidden +'" id="'+ fdSL_image_div_hidden +'" value="" >'+
 					'<input type="hidden" name="'+ fdSL_image_name_hidden +'" id="'+ fdSL_image_name_hidden +'" value="" >'+
@@ -2261,8 +2261,6 @@ function fdisplay_page_set() {
 
 if (localStorage.fdisplay_data.length > 10){
 
-
-	
 	var fdisplay_data=localStorage.fdisplay_data
 	var fdisplay_head_array =  fdisplay_data.split('rdrd');
 	//alert (fdisplay_head_array.length)
@@ -2275,14 +2273,9 @@ if (localStorage.fdisplay_data.length > 10){
 		$("#fdSL_image_div_hidden_"+i.toString()).val(fdisplayImg_path); 
 		$("#fdSL_image_name_hidden_"+i.toString()).val(fdisplayImg); 
 		
-		var image = document.getElementById('fdSL_image_div_'+i.toString());
+		var image = document.getElementById("fdSL_image_div_"+i.toString());
 		image.src = fdisplayImg_path;
 		
-		var image = document.getElementById('fdSL_image_div_0');
-		image.src = fdisplayImg_path;
-		
-		alert ('fdSL_image_div_'+i.toString())
-		alert (fdisplayImg_path)
 		
 	}//endfor
 }//end if
